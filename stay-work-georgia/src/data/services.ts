@@ -9,10 +9,10 @@ export const SERVICES: Service[] = [
     description:
       'We help foreigners navigate the work permit process step by step, including document review, filing guidance and follow-up.',
     whatsIncluded: [
-      { title: 'Application Readiness Check', desc: 'We review your situation and confirm whether you qualify before any documents are submitted. This saves time and prevents unnecessary rejections.' },
-      { title: 'Document Review & Corrections', desc: 'All required papers are checked for errors and gaps before submission to authorities. We ensure every document meets current Georgian requirements.' },
-      { title: 'Filing Guidance', desc: 'Step-by-step instructions and direct support throughout the submission process. You will never have to figure out what to do next on your own.' },
-      { title: 'Status Follow-up', desc: 'We monitor your application and keep you informed of every update and next step. Any requests from authorities are handled promptly on your behalf.' },
+      { title: 'Application Readiness Check', desc: 'We review your situation and confirm eligibility before any documents are submitted.' },
+      { title: 'Document Review & Corrections', desc: 'All papers are checked for errors and gaps to meet current Georgian requirements.' },
+      { title: 'Filing Guidance', desc: 'Step-by-step instructions and direct support throughout the submission process.' },
+      { title: 'Status Follow-up', desc: 'We monitor your application and handle any authority requests on your behalf.' },
     ],
     detailedId: 'service-work-permit',
     icon: IconWork,
@@ -24,10 +24,10 @@ export const SERVICES: Service[] = [
     description:
       'From initial application to renewals and updates, we prepare the right set of documents and coordinate the process with clarity.',
     whatsIncluded: [
-      { title: 'Application Package Preparation', desc: 'We compile and verify the complete document set required for your residence permit. Every item is checked for accuracy before anything is submitted.' },
-      { title: 'Renewals & Change Support', desc: 'Timely renewal management and assistance when your status or circumstances change. We track expiry dates so you are always notified well in advance.' },
-      { title: 'Legal Documentation Coordination', desc: 'All official papers are prepared in the correct format and language as required. We liaise with relevant offices to avoid back-and-forth delays.' },
-      { title: 'Deadline Tracking', desc: 'We keep track of critical dates so your permit never lapses unexpectedly. Automated reminders and personal alerts ensure nothing is missed.' },
+      { title: 'Application Package Preparation', desc: 'We compile and verify the complete document set required for your residence permit.' },
+      { title: 'Renewals & Change Support', desc: 'Timely renewal management and assistance when your status or circumstances change.' },
+      { title: 'Legal Documentation Coordination', desc: 'All papers are prepared in the correct format and language to avoid back-and-forth delays.' },
+      { title: 'Deadline Tracking', desc: 'We track critical dates so your permit never lapses unexpectedly.' },
     ],
     detailedId: 'service-residence-permit',
     icon: IconHome,
@@ -39,10 +39,10 @@ export const SERVICES: Service[] = [
     description:
       'We assist you with IE registration and small-business setup essentials, including practical coordination and guidance.',
     whatsIncluded: [
-      { title: 'IE Registration Preparation', desc: 'Full support gathering and submitting all documents needed to register as an individual entrepreneur. We handle the administrative side so you can focus on your work.' },
-      { title: 'Legal Address Coordination', desc: 'We help you secure a valid legal address required for the registration process. This is often one of the first hurdles for newcomers, and we make it straightforward.' },
-      { title: 'Tax & Accounting Coordination', desc: 'Introduction to basic tax obligations and connection to trusted accounting partners. We make sure you start compliant from day one.' },
-      { title: 'Step-by-step Guidance', desc: 'Clear instructions at every stage so you always know exactly what comes next. We are available to answer questions throughout the entire process.' },
+      { title: 'IE Registration Preparation', desc: 'Full support gathering and submitting all documents to register as an individual entrepreneur.' },
+      { title: 'Legal Address Coordination', desc: 'We help you secure a valid legal address required for the registration process.' },
+      { title: 'Tax & Accounting Coordination', desc: 'Introduction to basic tax obligations and connection to trusted accounting partners.' },
+      { title: 'Step-by-step Guidance', desc: 'Clear instructions at every stage so you always know exactly what comes next.' },
     ],
     detailedId: 'service-ie-registration',
     icon: IconUser,
@@ -54,10 +54,10 @@ export const SERVICES: Service[] = [
     description:
       'We provide end-to-end support for basic business setup so you can focus on your work while we handle the legal paperwork.',
     whatsIncluded: [
-      { title: 'Business Formation Guidance', desc: 'Expert advice on choosing the right legal entity structure for your specific goals. We explain the pros and cons of each option in plain language.' },
-      { title: 'Document Checklist & Preparation', desc: 'We create a tailored document list and help you gather everything needed for registration. No guesswork — just a clear, actionable plan.' },
-      { title: 'Process Planning from Day One', desc: 'A clear roadmap of every step, timeline, and responsibility from the very start. You always know what is happening and what to expect next.' },
-      { title: 'Practical Follow-up', desc: 'We stay engaged after setup to help resolve any issues that arise post-registration. Our support does not stop once the paperwork is filed.' },
+      { title: 'Business Formation Guidance', desc: 'Expert advice on choosing the right legal entity structure for your goals.' },
+      { title: 'Document Checklist & Preparation', desc: 'A tailored document list and full help gathering everything needed for registration.' },
+      { title: 'Process Planning from Day One', desc: 'A clear roadmap of every step, timeline, and responsibility from the start.' },
+      { title: 'Practical Follow-up', desc: 'We stay engaged after setup to resolve any issues that arise post-registration.' },
     ],
     detailedId: 'service-business-setup',
     icon: IconBriefcase,
@@ -69,10 +69,10 @@ export const SERVICES: Service[] = [
     description:
       'We support employers through the work permit process, providing document checklists and practical legal guidance.',
     whatsIncluded: [
-      { title: 'Employer-side Document Checklist', desc: "A clear list of everything the company must provide to sponsor a foreign employee's permit. We tailor it to your specific case and industry." },
-      { title: 'Work Permit Process Support', desc: 'We guide your HR or legal team through each phase of the permit application. Complex requirements are broken down into simple, actionable steps.' },
-      { title: 'Filing Preparation Coordination', desc: 'All documents are organised and reviewed before submission to minimise delays. We coordinate directly with your team to keep the process on schedule.' },
-      { title: 'Ongoing Status Follow-up', desc: 'We track progress and notify you of any updates or additional requirements from authorities. Your HR team stays informed without having to chase anything themselves.' },
+      { title: 'Employer-side Document Checklist', desc: "A tailored list of everything the company must provide to sponsor a foreign employee's permit." },
+      { title: 'Work Permit Process Support', desc: 'We guide your HR team through each phase of the permit application, step by step.' },
+      { title: 'Filing Preparation Coordination', desc: 'Documents are organised and reviewed before submission to keep the process on schedule.' },
+      { title: 'Ongoing Status Follow-up', desc: 'We track progress and notify your team of any updates or authority requirements.' },
     ],
     detailedId: 'service-employer-support',
     icon: IconBuilding,
@@ -84,10 +84,10 @@ export const SERVICES: Service[] = [
     description:
       'Need to renew or update documents? We prepare everything carefully and coordinate your case with transparent communication.',
     whatsIncluded: [
-      { title: 'Renewal Support & Preparation', desc: 'Timely preparation of all renewal documents so you never miss a critical deadline. We start the process early enough to handle any unexpected complications.' },
-      { title: 'Document Readiness Review', desc: 'A thorough check of your existing documents to identify anything missing or outdated. We catch issues before they become problems with the authorities.' },
-      { title: 'Corrections & Final Checks', desc: 'We review and correct any errors before documents are submitted to the relevant authority. Accuracy at this stage prevents costly delays and resubmissions.' },
-      { title: 'Coordination Throughout', desc: 'Continuous communication and updates so you always know where your case stands. We act as your single point of contact for the entire renewal process.' },
+      { title: 'Renewal Support & Preparation', desc: 'Timely preparation of all renewal documents so you never miss a critical deadline.' },
+      { title: 'Document Readiness Review', desc: 'A thorough check of your documents to identify anything missing or outdated.' },
+      { title: 'Corrections & Final Checks', desc: 'We review and correct any errors before documents are submitted to the authority.' },
+      { title: 'Coordination Throughout', desc: 'Continuous updates so you always know where your case stands.' },
     ],
     detailedId: 'service-documents-renewals',
     icon: IconFile,

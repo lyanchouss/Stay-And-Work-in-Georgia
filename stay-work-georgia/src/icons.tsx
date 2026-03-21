@@ -70,81 +70,113 @@ export function ArrowRight(props: { className?: string }) {
   )
 }
 
+/* Work Permit Support — паспорт со штампом одобрения */
 export function IconWork(props: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={props.className}>
-      <rect x="8" y="7" width="22" height="32" rx="3" stroke="currentColor" strokeWidth="2" />
-      <rect x="8" y="7" width="22" height="8" rx="3" fill="currentColor" opacity="0.12" />
-      <circle cx="19" cy="24" r="5.5" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M16 24h6M19 21v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <rect x="30" y="18" width="10" height="10" rx="2" stroke="currentColor" strokeWidth="1.5" fill="currentColor" opacity="0.1" />
-      <path d="M33 22l2 2 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M30 33h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-      <path d="M30 37h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
+      {/* Passport booklet body */}
+      <rect x="6" y="5" width="26" height="36" rx="3" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.08" />
+      <line x1="19" y1="5" x2="19" y2="41" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.35" />
+      {/* Photo area */}
+      <circle cx="13" cy="18" r="5" stroke="currentColor" strokeWidth="1.5" fill="currentColor" fillOpacity="0.14" />
+      <path d="M8 27c0-3 2.2-5 5-5s5 2 5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Text lines */}
+      <path d="M22 15h7M22 19.5h5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeOpacity="0.75" />
+      {/* Approval stamp */}
+      <circle cx="37" cy="13" r="8" fill="currentColor" fillOpacity="0.12" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="37" cy="13" r="5.5" stroke="currentColor" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="2 2" />
+      <path d="M33.5 13l2.5 2.5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
 
+/* Residence Permit Support — дом с ключом */
 export function IconHome(props: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={props.className}>
-      <path d="M7 23L24 10l17 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M11 21v18h16V27h10v12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <rect x="16" y="27" width="7" height="12" rx="1" stroke="currentColor" strokeWidth="1.5" fill="currentColor" opacity="0.08" />
-      <path d="M34 17c-3.8 0-6.5 2.7-6.5 6v3.5c0 1 1.4 2.8 6.5 4.8 5.1-2 6.5-3.8 6.5-4.8V23c0-3.3-2.7-6-6.5-6z" fill="currentColor" opacity="0.12" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M31.5 24l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      {/* House roof */}
+      <path d="M6 22L24 7l18 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {/* House walls */}
+      <path d="M10 19.5V41h28V19.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {/* House fill */}
+      <path d="M10 19.5V41h28V19.5L24 7z" fill="currentColor" fillOpacity="0.07" />
+      {/* Door */}
+      <rect x="19" y="28" width="10" height="13" rx="1.5" fill="currentColor" fillOpacity="0.12" stroke="currentColor" strokeWidth="1.5" />
+      {/* Key */}
+      <circle cx="38" cy="14" r="5.5" fill="currentColor" fillOpacity="0.12" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="38" cy="14" r="2" fill="currentColor" fillOpacity="0.4" />
+      <path d="M42 18l4 4M44 20l-1.5 1.5M45.5 21.5l-1.5 1.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   )
 }
 
+/* IE Registration — человек + регистрационный документ */
 export function IconUser(props: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={props.className}>
-      <circle cx="14.5" cy="16" r="5.5" stroke="currentColor" strokeWidth="2" fill="currentColor" opacity="0.08" />
-      <path d="M6 34c0-5 3.8-8.5 8.5-8.5S23 29 23 34" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <rect x="24" y="10" width="18" height="26" rx="2" stroke="currentColor" strokeWidth="1.5" fill="currentColor" opacity="0.08" />
-      <path d="M28 17h10M28 22h10M28 27h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <rect x="28" y="30" width="10" height="4" rx="1.5" fill="currentColor" opacity="0.14" />
-      <path d="M34.5 7v6M31.5 10h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Person */}
+      <circle cx="15" cy="15" r="6.5" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.1" />
+      <path d="M5 35c0-5.5 4.5-9 10-9s10 3.5 10 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      {/* Registration document */}
+      <rect x="27" y="11" width="16" height="22" rx="2" stroke="currentColor" strokeWidth="1.6" fill="currentColor" fillOpacity="0.08" />
+      <path d="M30.5 17h9M30.5 21.5h9M30.5 26h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      {/* Pen signing */}
+      <path d="M34 33l5-5 2.5 2.5-5 5H34v-2.5z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
     </svg>
   )
 }
 
+/* Business Setup — здание с флагом */
 export function IconBriefcase(props: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={props.className}>
-      <rect x="7" y="13" width="34" height="23" rx="3" stroke="currentColor" strokeWidth="2" fill="currentColor" opacity="0.06" />
-      <path d="M17 13v-2.5A3.5 3.5 0 0 1 20.5 7h7A3.5 3.5 0 0 1 31 10.5V13" stroke="currentColor" strokeWidth="2" />
-      <path d="M7 23h34" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M22 24h4v4h-4z" fill="currentColor" opacity="0.2" />
-      <path d="M30 28l3 3 5-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Building body */}
+      <rect x="8" y="16" width="26" height="26" rx="2" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.08" />
+      {/* Windows */}
+      <rect x="12" y="21" width="5" height="5" rx="1" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.2" />
+      <rect x="21" y="21" width="5" height="5" rx="1" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.2" />
+      <rect x="12" y="31" width="5" height="5" rx="1" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.2" />
+      <rect x="21" y="31" width="5" height="5" rx="1" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.2" />
+      {/* Flag pole */}
+      <path d="M34 42V8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      {/* Flag */}
+      <path d="M34 8l8 4-8 4z" fill="currentColor" fillOpacity="0.35" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
     </svg>
   )
 }
 
+/* Employer Support — рукопожатие */
 export function IconBuilding(props: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={props.className}>
-      <rect x="6" y="11" width="20" height="29" rx="2" stroke="currentColor" strokeWidth="2" fill="currentColor" opacity="0.06" />
-      <rect x="22" y="16" width="20" height="24" rx="2" stroke="currentColor" strokeWidth="2" fill="currentColor" opacity="0.04" />
-      <path d="M10 17h3M10 22h3M10 27h3M16 17h3M16 22h3M16 27h3M26 22h3M26 27h3M26 32h3M32 22h3M32 27h3M32 32h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.85" />
-      <circle cx="38" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M34 12h8M38 8v8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+      {/* Left arm */}
+      <path d="M4 30l7-7 5 2 6-3h4c1.5 0 2.5 1 2.5 2.5S27.5 27 26 27h-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Handshake clasp */}
+      <path d="M21 27l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      {/* Right arm */}
+      <path d="M44 30l-7-7-5 2-3-1-4 3c-1.2.8-1.2 2.5 0 3l5 3 8-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Left person */}
+      <circle cx="9" cy="16" r="5" stroke="currentColor" strokeWidth="1.6" fill="currentColor" fillOpacity="0.1" />
+      {/* Right person */}
+      <circle cx="39" cy="16" r="5" stroke="currentColor" strokeWidth="1.6" fill="currentColor" fillOpacity="0.1" />
     </svg>
   )
 }
 
+/* Documents & Renewals — документ + обновление */
 export function IconFile(props: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={props.className}>
-      <rect x="8" y="9" width="20" height="28" rx="2" stroke="currentColor" strokeWidth="2" fill="currentColor" opacity="0.06" />
-      <rect x="14" y="5" width="20" height="28" rx="2" stroke="currentColor" strokeWidth="2" fill="currentColor" opacity="0.04" />
-      <path d="M20 14h8M20 19h8M20 24h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="37" cy="33" r="7" stroke="currentColor" strokeWidth="1.5" fill="currentColor" opacity="0.08" />
-      <path d="M33.8 31.2a3.5 3.5 0 0 1 5.6.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M40.2 34.8a3.5 3.5 0 0 1-5.6-.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M39.8 29.6v2.1h-2.2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M34.2 36.4v-2.1h2.2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Document */}
+      <rect x="6" y="6" width="22" height="30" rx="2.5" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.08" />
+      <path d="M11 14h12M11 19.5h12M11 25h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Renewal badge circle */}
+      <circle cx="35" cy="33" r="10" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="1.6" />
+      {/* Circular arrows (refresh) */}
+      <path d="M29.5 30a6 6 0 0 1 9.5-1.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M40.5 36a6 6 0 0 1-9.5 1.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M38.5 26.5l1 2.5-2.5.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M31.5 39.5l-1-2.5 2.5-.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }

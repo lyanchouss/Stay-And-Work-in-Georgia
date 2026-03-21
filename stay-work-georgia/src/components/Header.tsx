@@ -34,7 +34,7 @@ export default function Header({
       ].join(' ')}
     >
       <div className="relative">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2.5 sm:px-10 lg:px-14">
           <a
             href="#top"
             onClick={(e) => {
@@ -189,7 +189,7 @@ export default function Header({
             mobileOpen ? 'max-h-60' : 'max-h-0',
           ].join(' ')}
         >
-          <div className="mx-auto max-w-6xl px-4 pb-3 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-6 pb-3 sm:px-10 lg:px-14">
             <div className="flex flex-col gap-1">
               <button
                 type="button"

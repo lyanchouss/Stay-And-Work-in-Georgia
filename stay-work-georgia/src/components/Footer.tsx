@@ -39,8 +39,8 @@ export default function Footer({ services, scrollToId }: FooterProps) {
   const [contactHover, setContactHover] = useState(false)
   const contactOpen = contactPinned || contactHover
   return (
-    <footer className="mt-14 border-t border-white/10" aria-label="Footer" style={{ background: '#04081a' }}>
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="mt-14 border-t border-white/10 px-6 sm:px-10 lg:px-14" aria-label="Footer" style={{ background: '#04081a' }}>
+      <div className="mx-auto max-w-6xl py-12">
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           <div className="reveal" data-reveal style={delayStyle(80)}>
             <div className="flex items-center gap-3">
@@ -52,7 +52,7 @@ export default function Footer({ services, scrollToId }: FooterProps) {
                 <div className="text-xs text-white/65">Professional consultancy services</div>
               </div>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
+            <p className="mt-16 text-sm leading-relaxed text-white/70">
               We help foreign nationals navigate work permits, residence permits and business setup in Georgia.
             </p>
             <div className="mt-5 space-y-2 text-sm text-white/75">
@@ -168,6 +168,59 @@ export default function Footer({ services, scrollToId }: FooterProps) {
               </div>
               </div>
             </div>
+
+            {/* Location */}
+            <a
+              href="https://maps.google.com/?q=Tbilisi,Georgia"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open in Google Maps"
+              className="group mt-4 flex items-center gap-3 rounded-xl px-3 py-2.5 transition-all duration-200 hover:-translate-y-px"
+              style={{
+                border: '1px solid rgba(201,149,90,0.22)',
+                background: 'rgba(201,149,90,0.06)',
+              }}
+            >
+              {/* Pin icon */}
+              <div
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-all duration-200 group-hover:bg-[rgba(201,149,90,0.18)]"
+                style={{
+                  background: 'rgba(201,149,90,0.10)',
+                  color: '#C8A45C',
+                }}
+              >
+                <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
+                  <path
+                    d="M10 2a5.5 5.5 0 0 0-5.5 5.5c0 3.5 5.5 10.5 5.5 10.5s5.5-7 5.5-10.5A5.5 5.5 0 0 0 10 2z"
+                    stroke="currentColor"
+                    strokeWidth="1.4"
+                    strokeLinejoin="round"
+                    fill="currentColor"
+                    fillOpacity="0.12"
+                  />
+                  <circle cx="10" cy="7.5" r="2" stroke="currentColor" strokeWidth="1.3" fill="currentColor" fillOpacity="0.2" />
+                </svg>
+              </div>
+              {/* Address text */}
+              <div>
+                <div className="text-xs font-medium" style={{ color: '#C8A45C', letterSpacing: '0.06em' }}>
+                  LOCATION
+                </div>
+                <div className="text-sm leading-tight" style={{ color: 'rgba(234,223,208,0.85)' }}>
+                  Tbilisi, Georgia
+                </div>
+              </div>
+              {/* Arrow hint */}
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                className="ml-auto h-3.5 w-3.5 shrink-0 opacity-0 transition-opacity duration-200 group-hover:opacity-60"
+                style={{ color: '#C8A45C' }}
+                aria-hidden="true"
+              >
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
           </div>
         </div>
 

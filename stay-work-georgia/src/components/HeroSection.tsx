@@ -68,7 +68,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 pb-[52px] pt-[60px] sm:px-6 sm:pt-[75px] lg:px-8 lg:pb-[52px]" style={{ zoom: 0.77 }}>
+      <div className="relative mx-auto max-w-6xl px-6 pb-[52px] pt-[60px] sm:px-10 sm:pt-[75px] lg:px-14 lg:pb-[52px]" style={{ zoom: 0.77 }}>
         <div className="text-center">
           <div className="reveal" data-reveal style={delayStyle(0)}>
             <span className="relative -top-4 inline-block font-['Inter'] text-[13px] font-medium uppercase tracking-[3px] text-[#C9955A]">

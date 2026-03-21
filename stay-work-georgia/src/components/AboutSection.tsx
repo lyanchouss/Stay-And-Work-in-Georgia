@@ -11,11 +11,11 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="scroll-mt-[100px] px-4 pb-16 pt-[40px] sm:px-6 lg:px-8"
+      className="scroll-mt-[100px] px-8 pb-12 pt-[40px] sm:px-14 lg:px-20"
       aria-label="About Us"
       style={{ background: '#04081a' }}
     >
-      <div className="mx-auto max-w-6xl" style={{ transform: 'scale(0.97)', transformOrigin: 'top center' }}>
+      <div className="mx-auto max-w-6xl">
 
         {/* Label above columns */}
         <div className="reveal mb-8" data-reveal style={delayStyle(0)}>
