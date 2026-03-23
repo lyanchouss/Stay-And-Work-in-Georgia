@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import type { Service } from '../types'
 import { delayStyle } from '../types'
 import { ArrowRight } from '../icons'
 import { useServiceCardStyle } from '../hooks/useServiceCardStyle'
-import ServiceCardControls from './ServiceCardControls'
 
 type DetailedServicesSectionProps = {
   services: Service[]
@@ -20,8 +18,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 }
 
 export default function DetailedServicesSection({ services, scrollToId }: DetailedServicesSectionProps) {
-  const { style: cs, setStyle: setCs } = useServiceCardStyle()
-  const [showControls, setShowControls] = useState(false)
+  const { style: cs } = useServiceCardStyle()
 
   return (
     <section
@@ -170,31 +167,6 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
         </div>
       </div>
 
-      {/* Floating controls */}
-      <div className="fixed bottom-6 left-6 z-[9999] flex flex-col items-start gap-2">
-        {showControls && (
-          <ServiceCardControls style={cs} onChange={setCs} />
-        )}
-        <button
-          type="button"
-          onClick={() => setShowControls((v) => !v)}
-          title="Настройки карточек услуг"
-          className="flex h-9 w-9 items-center justify-center rounded-full transition hover:brightness-110"
-          style={{
-            background: showControls ? 'rgba(201,149,90,0.18)' : 'rgba(5, 4, 12, 0.92)',
-            border: '1px solid rgba(200,160,80,0.28)',
-            backdropFilter: 'blur(10px)',
-            color: '#C9955A',
-          }}
-        >
-          <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
-            <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
-            <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
-            <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
-            <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
-          </svg>
-        </button>
-      </div>
     </section>
   )
 }

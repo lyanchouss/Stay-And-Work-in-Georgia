@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import heroImage from '../assets/hero-bg.jpg'
 import workPermitSupportIcon from '../assets/Work_Permit_Support_removebg.png'
 import residencePermitSupportIcon from '../assets/Residence_Permit_Support_removebg.png'
@@ -11,7 +10,6 @@ import { delayStyle } from '../types'
 import { ArrowRight } from '../icons'
 import { HoverBorderGradient } from './ui/HoverBorderGradient'
 import { useCardStyle } from '../hooks/useCardStyle'
-import CardStyleControls from './CardStyleControls'
 
 function vc(hue: number, sat: number, opacity: number) {
   return `hsla(${hue}, ${sat}%, 6%, ${(opacity / 100).toFixed(2)})`
@@ -32,8 +30,7 @@ type HeroSectionProps = {
 }
 
 export default function HeroSection({ services, scrollToId }: HeroSectionProps) {
-  const { style: cs, setStyle: setCs } = useCardStyle()
-  const [showControls, setShowControls] = useState(false)
+  const { style: cs } = useCardStyle()
 
   const edgeShadow = [
     `inset 0 0 ${cs.edgeSpread}px ${Math.round(cs.edgeSpread * 0.44)}px ${vc(cs.hue, cs.saturation, cs.edgeOpacity)}`,
@@ -311,36 +308,6 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         </div>
       </div>
 
-      {/* Floating card style controls (both layouts) */}
-      <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-2">
-        {showControls && (
-          <CardStyleControls style={cs} onChange={setCs} />
-        )}
-        <button
-          type="button"
-          onClick={() => setShowControls((v) => !v)}
-          title="Настройки карточек"
-          className="flex h-9 w-9 items-center justify-center rounded-full transition hover:brightness-110"
-          style={{
-            background: showControls ? 'rgba(201,149,90,0.18)' : 'rgba(5, 4, 12, 0.92)',
-            border: '1px solid rgba(200,160,80,0.28)',
-            backdropFilter: 'blur(10px)',
-            color: '#C9955A',
-          }}
-        >
-          <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
-            <circle cx="10" cy="6" r="1.5" stroke="currentColor" strokeWidth="1.3" />
-            <circle cx="10" cy="14" r="1.5" stroke="currentColor" strokeWidth="1.3" />
-            <circle cx="4" cy="10" r="1.5" stroke="currentColor" strokeWidth="1.3" />
-            <line x1="2" y1="6" x2="8.5" y2="6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-            <line x1="11.5" y1="6" x2="18" y2="6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-            <line x1="2" y1="14" x2="8.5" y2="14" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-            <line x1="11.5" y1="14" x2="18" y2="14" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-            <line x1="2" y1="10" x2="2.5" y2="10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-            <line x1="5.5" y1="10" x2="18" y2="10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-          </svg>
-        </button>
-      </div>
     </section>
   )
 }
