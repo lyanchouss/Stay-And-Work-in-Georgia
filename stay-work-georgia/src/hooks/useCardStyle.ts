@@ -13,18 +13,18 @@ export type CardStyleState = {
 }
 
 export const DEFAULT_CARD_STYLE: CardStyleState = {
-  bgOpacity: 9,
-  edgeOpacity: 32,
-  edgeSpread: 14,
-  topOpacity: 6.5,
-  bottomOpacity: 18,
-  hue: 194,
-  saturation: 51,
-  bottomEdge: 0,
+  bgOpacity: 50,
+  edgeOpacity: 45,
+  edgeSpread: 24,
+  topOpacity: 5,
+  bottomOpacity: 64,
+  hue: 211,
+  saturation: 100,
+  bottomEdge: 21,
   topEdge: 0,
 }
 
-const STORAGE_KEY = 'card-style-v1'
+const STORAGE_KEY = 'card-style-v2'
 
 function loadStyle(): CardStyleState {
   try {

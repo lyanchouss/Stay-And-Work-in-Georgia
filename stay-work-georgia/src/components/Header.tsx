@@ -43,10 +43,10 @@ export default function Header({
             }}
             className="flex items-center gap-2.5"
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C8A45C]/15 ring-1 ring-[#C8A45C]/25">
-              <IconMark className="h-4 w-4 text-[#C8A45C]" />
+            <div className="flex h-[33.5px] w-[33.5px] items-center justify-center rounded-lg bg-[#C8A45C]/15 ring-1 ring-[#C8A45C]/25">
+              <IconMark className="h-[17px] w-[17px] text-[#C8A45C]" />
             </div>
-            <span className="text-sm font-semibold text-white">Stay &amp; Work Georgia</span>
+            <span className="text-sm font-semibold text-white">Stay &amp; Work in Georgia</span>
           </a>
 
           <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
