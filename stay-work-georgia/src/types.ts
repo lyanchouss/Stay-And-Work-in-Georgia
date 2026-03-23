@@ -9,7 +9,7 @@ export type Service = {
   description: string
   whatsIncluded: Array<{ title: string; desc: string }>
   detailedId: string
-  icon: (props: { className?: string }) => ReactElement
+  icon: (props: { className?: string; style?: CSSProperties }) => ReactElement
 }
 
 export const delayStyle = (ms: number): CSSProperties =>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { Service } from '../types'
 import { delayStyle } from '../types'
-import { IconMark, ArrowRight } from '../icons'
+import { IconMark } from '../icons'
 
 type FooterProps = {
   services: Service[]
