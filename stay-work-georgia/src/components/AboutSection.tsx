@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="scroll-mt-[100px] px-8 pb-12 pt-[40px] sm:px-14 lg:px-20"
+      className="scroll-mt-[100px] px-6 pb-12 pt-[40px] sm:px-10 lg:px-14"
       aria-label="About Us"
       style={{ background: '#04081a' }}
     >
@@ -57,15 +57,15 @@ export default function AboutSection() {
         <div className="reveal mt-6 h-px w-full" data-reveal style={{ ...delayStyle(150), background: 'rgba(255,255,255,0.08)' }} />
 
         {/* Bottom: four columns */}
-        <div className="reveal mt-0 grid grid-cols-2 md:grid-cols-4" data-reveal style={delayStyle(200)}>
+        <div className="reveal mt-0 grid grid-cols-1 md:grid-cols-4" data-reveal style={delayStyle(200)}>
           {HIGHLIGHTS.map((h, i) => (
             <div
               key={h.key}
-              className="px-0 py-5 md:px-6"
-              style={{
-                borderRight: i < HIGHLIGHTS.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
-                paddingLeft: i === 0 ? 0 : undefined,
-              }}
+              className={[
+                'px-0 py-4 md:py-5 md:px-6 border-white/[0.08]',
+                i < HIGHLIGHTS.length - 1 ? 'border-b md:border-b-0 md:border-r' : '',
+              ].join(' ')}
+              style={{ paddingLeft: i === 0 ? 0 : undefined }}
             >
               <div
                 className="text-[17px] font-semibold leading-snug"

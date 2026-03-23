@@ -20,14 +20,14 @@ export const SERVICES: Service[] = [
   {
     key: 'residence-permit',
     title: 'Residence Permit Support',
-    short: 'Residence through employment or entrepreneurship with reliable legal support.',
+    short: 'Residence via employment or entrepreneurship with legal support.',
     description:
-      'From initial application to renewals and updates, we prepare the right set of documents and coordinate the process with clarity.',
+      'We handle documents and coordination from application to renewal.',
     whatsIncluded: [
-      { title: 'Application Package Preparation', desc: 'We compile and verify the complete document set required for your residence permit.' },
-      { title: 'Renewals & Change Support', desc: 'Timely renewal management and assistance when your status or circumstances change.' },
-      { title: 'Legal Documentation Coordination', desc: 'All papers are prepared in the correct format and language to avoid back-and-forth delays.' },
-      { title: 'Deadline Tracking', desc: 'We track critical dates so your permit never lapses unexpectedly.' },
+      { title: 'Package Preparation', desc: 'We verify all documents needed for your residence permit.' },
+      { title: 'Renewals & Change Support', desc: 'Renewal support when your status or circumstances change.' },
+      { title: 'Document Coordination', desc: 'Papers prepared in the correct format to avoid delays.' },
+      { title: 'Deadline Tracking', desc: 'We track critical dates so your permit never lapses.' },
     ],
     detailedId: 'service-residence-permit',
     icon: IconHome,

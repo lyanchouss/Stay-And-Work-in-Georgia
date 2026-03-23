@@ -14,17 +14,17 @@ export type ServiceCardStyleState = {
 
 export const DEFAULT_SERVICE_CARD_STYLE: ServiceCardStyleState = {
   paddingX: 14,
-  paddingY: 12,
-  gap: 6,
+  paddingY: 14,
+  gap: 18,
   titleSize: 17,
   descSize: 13,
   radius: 6,
   cols: 2,
-  cardWidth: 90,
+  cardWidth: 100,
   cardHeight: 110,
 }
 
-const STORAGE_KEY = 'service-card-style-v7'
+const STORAGE_KEY = 'service-card-style-v11'
 
 function loadStyle(): ServiceCardStyleState {
   try {

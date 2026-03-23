@@ -39,11 +39,11 @@ export default function Footer({ services, scrollToId }: FooterProps) {
   const [contactHover, setContactHover] = useState(false)
   const contactOpen = contactPinned || contactHover
   return (
-    <footer className="mt-14 border-t border-white/10 px-6 sm:px-10 lg:px-14" aria-label="Footer" style={{ background: '#04081a' }}>
+    <footer className="border-t border-white/10 px-6 sm:px-10 lg:px-14" aria-label="Footer" style={{ background: '#04081a', marginTop: '54px' }}>
       <div className="mx-auto max-w-6xl py-12">
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           <div className="reveal" data-reveal style={delayStyle(80)}>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-5">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10">
                 <IconMark className="h-5 w-5 text-[#C8A45C]" />
               </div>
@@ -52,7 +52,7 @@ export default function Footer({ services, scrollToId }: FooterProps) {
                 <div className="text-xs text-white/65">Professional consultancy services</div>
               </div>
             </div>
-            <p className="mt-16 text-sm leading-relaxed text-white/70">
+            <p className="text-sm leading-relaxed text-white/70" style={{ marginTop: '25px' }}>
               We help foreign nationals navigate work permits, residence permits and business setup in Georgia.
             </p>
             <div className="mt-5 space-y-2 text-sm text-white/75">

@@ -26,7 +26,7 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
   return (
     <section
       id="detailed-services"
-      className="scroll-mt-[100px] px-8 pb-20 pt-[36px] sm:px-14 lg:px-20"
+      className="scroll-mt-[100px] px-6 pb-20 pt-[36px] sm:px-10 lg:px-14"
       aria-label="Detailed Services"
       style={{ background: '#04081a' }}
     >
@@ -73,14 +73,19 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
                       </div>
                       <div className="flex items-center gap-3">
                         <div
-                          className="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-lg"
+                          className="shrink-0 rounded-lg"
                           style={{
+                            width: '54px',
+                            height: '54px',
                             background: 'rgba(201,149,90,0.10)',
                             border: '1.5px solid rgba(201,149,90,0.35)',
                             color: '#C9955A',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                           }}
                         >
-                          <Icon className="h-7 w-7" />
+                          <Icon className="block h-[28px] w-[28px]" style={{ marginLeft: '3px', marginTop: '3px' }} />
                         </div>
                         <h3
                           className="font-['Playfair_Display'] font-bold leading-tight"
@@ -110,11 +115,10 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
 
                   {/* ── Right panel: includes ── */}
                   <div
-                    className="grid"
+                    className="grid grid-cols-1 sm:grid-cols-2"
                     style={{
-                      gridTemplateColumns: '1fr 1fr',
-                      columnGap: '2px',
-                      rowGap: '10px',
+                      columnGap: `${cs.gap}px`,
+                      rowGap: '18px',
                       alignItems: 'stretch',
                     }}
                   >
@@ -126,7 +130,8 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
                           padding: `${cs.paddingY}px ${cs.paddingX}px`,
                           borderRadius: `${cs.radius}px`,
                           width: `${cs.cardWidth}%`,
-                          minHeight: cs.cardHeight > 0 ? `${cs.cardHeight}px` : undefined,
+                          height: cs.cardHeight > 0 ? `${cs.cardHeight}px` : undefined,
+                          overflow: cs.cardHeight > 0 ? 'hidden' : undefined,
                           background: 'rgba(255,255,255,0.03)',
                           border: '1px solid rgba(255,255,255,0.07)',
                         }}
