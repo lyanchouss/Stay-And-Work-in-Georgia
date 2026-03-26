@@ -9,7 +9,7 @@
     "eyebrow": "RESIDENCE & WORK PERMIT SUPPORT",
     "titleLine1": "STAY AND WORK",
     "titleLine2": "IN GEORGIA",
-    "slogan": "YOUR LEGAL PATH TO LIVING AND WORKING IN GEORGIA",
+    "slogan": "Work permits, residence permits and employer support in Georgia",
     "learnMore": "Learn More",
     "cta": {
       "title": "Get a consultation right now",
@@ -106,7 +106,7 @@
       }
     },
     "business-setup": {
-      "title": "Business Setup",
+      "title": "Employer Support (B2B)",
       "short": "Full support when opening and structuring your business presence in Georgia.",
       "description": "We provide end-to-end support for basic business setup so you can focus on your work while we handle the legal paperwork.",
       "includes": {
@@ -119,6 +119,7 @@
     "employer-support": {
       "title": "Employer Support",
       "short": "We help companies build a structured hiring process for foreign employees in Georgia — without confusion, missed deadlines or unnecessary business risk.",
+      "heroShort": "Hiring process, compliance and ongoing support.",
       "buttonText": "Initial Assessment",
       "internalTitle": "Employer Support (B2B)",
       "description": "For employers, hiring a foreign national is not just about the hire itself — it means organising the process correctly from the start. In practice, most problems arise at this stage: unclear steps, incorrect sequencing, missed deadlines and the absence of a structured process that does not overload HR, management or operations teams.",

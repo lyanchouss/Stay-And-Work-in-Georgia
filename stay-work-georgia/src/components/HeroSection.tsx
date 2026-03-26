@@ -244,7 +244,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         {/* Dark cards zone — 1 column */}
         <div id="services" className="scroll-mt-[100px] px-5 pb-6 pt-8">
           <div className="grid grid-cols-1 gap-3">
-            {services.filter((_, i) => [0, 1, 2].includes(i)).map(renderMobileCard)}
+            {services.filter((_, i) => [0, 1, 4].includes(i)).map(renderMobileCard)}
           </div>
         </div>
 
@@ -307,7 +307,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
               style={delayStyle(120)}
             >
               <div className="grid gap-5 md:grid-cols-3">
-                {services.filter((_, i) => [0, 1, 2].includes(i)).map(renderServiceCard)}
+                {services.filter((_, i) => [0, 1, 4].includes(i)).map(renderServiceCard)}
               </div>
             </div>
 
