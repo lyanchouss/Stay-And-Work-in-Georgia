@@ -3,36 +3,50 @@ import type React from 'react'
 export function IconMark(props: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 44 52"
       fill="none"
       role="img"
       aria-label="Stay & Work Georgia logo"
       className={props.className}
     >
+      {/* Pin outline — white, transparent inside */}
       <path
-        d="M16 2C10.5 2 6 6.3 6 11.5c0 3.2 1.6 6 4 8L16 28l6-8.5c2.4-2 4-4.8 4-8C26 6.3 21.5 2 16 2z"
-        fill="currentColor"
-        opacity="0.15"
-      />
-      <path
-        d="M16 2C10.5 2 6 6.3 6 11.5c0 3.2 1.6 6 4 8L16 28l6-8.5c2.4-2 4-4.8 4-8C26 6.3 21.5 2 16 2z"
-        stroke="currentColor"
-        strokeWidth="1.5"
+        d="M20 6C12 6 5.5 12.2 5.5 20c0 4.5 2.1 8.5 5.5 11.5L20 44l9-12.5c3.4-3 5.5-7 5.5-11.5C34.5 12.2 28 6 20 6z"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="4.5"
         strokeLinejoin="round"
       />
+      {/* Briefcase body */}
+      <rect x="10.5" y="18.5" width="19" height="11" rx="2" fill="#ffffff" />
+      {/* Briefcase handle */}
       <path
-        d="M16 7v9M11.5 11.5h9"
-        stroke="currentColor"
-        strokeWidth="2"
+        d="M15 18.5v-3a2.5 2.5 0 0 1 2.5-2.5h5a2.5 2.5 0 0 1 2.5 2.5v3"
+        stroke="#ffffff"
+        strokeWidth="3"
+        fill="none"
         strokeLinecap="round"
       />
+      {/* Briefcase band / divider */}
+      <line x1="10.5" y1="23.5" x2="29.5" y2="23.5" stroke="rgba(0,0,0,0.25)" strokeWidth="1" />
+      {/* Briefcase clasp */}
+      <rect x="17.8" y="21.2" width="4.4" height="4.4" rx="1.2" fill="rgba(0,0,0,0.3)" />
+      {/* Leaf — large */}
       <path
-        d="M13 8.5l-1-1.5M19 8.5l1-1.5M13 14.5l-1 1.5M19 14.5l1 1.5"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
+        d="M30 5c3.2 0.2 6.5 2 7.5 5.5 0.6 2.5-0.8 5-3 6-1.5 0.6-3.2 0.2-4.5-1-1.6-1.5-2-4-0.8-6.2L30 5z"
+        fill="#9DBF5A"
       />
-      <circle cx="16" cy="11.5" r="1.5" fill="currentColor" opacity="0.4" />
+      {/* Large leaf vein */}
+      <path d="M31 6c0.4 1.5 0.2 3.8-0.8 5.8" stroke="#7DA342" strokeWidth="0.7" strokeLinecap="round" fill="none" />
+      {/* Leaf — small */}
+      <path
+        d="M28.5 3.5c1.8-1.2 4-1.8 5.5-0.8 1.2 0.7 1.5 2.2 0.8 3.4-0.8 1.3-2.5 1.6-3.8 0.8-1-0.6-1.5-1.8-1.5-3"
+        fill="#B5D478"
+      />
+      {/* Small leaf vein */}
+      <path d="M30 3.5c0.2 0.8 0 2-0.5 3" stroke="#8BB548" strokeWidth="0.5" strokeLinecap="round" fill="none" />
+      {/* Leaf stem */}
+      <path d="M27 12.5c1.2-2 3-5 4.5-7" stroke="#7DA342" strokeWidth="1" strokeLinecap="round" fill="none" />
     </svg>
   )
 }

@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "services": "Services",
+    "contact": "Contact",
+    "aboutUs": "About Us",
+    "detailedServices": "Detailed Services"
+  },
+  "hero": {
+    "eyebrow": "RESIDENCE & WORK PERMIT SUPPORT",
+    "titleLine1": "STAY AND WORK",
+    "titleLine2": "IN GEORGIA",
+    "slogan": "YOUR LEGAL PATH TO LIVING AND WORKING IN GEORGIA",
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Get a consultation right now",
+      "call": "Call",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "services": {
+    "work-permit": {
+      "title": "Work Permit",
+      "short": "If you are a foreign national, operating as an IE or planning to start work or business in Georgia, we will help you understand whether a work permit is required and how to start the process correctly.",
+      "heroShort": "Requirements, criteria and application process.",
+      "buttonText": "Initial Assessment",
+      "internalTitle": "Work Permit Support",
+      "description": "If you operate as an IE, plan to start work or business in Georgia, intend to get employed, or as an employer want to hire a foreign employee, it is important from the start to understand whether a work permit is required in your case and which procedure to follow. This is where we step in: we analyse your situation, determine the right direction and provide clear steps for a correct start to the process.",
+      "description2": "This service is especially useful if you are uncertain about your status, don't know which documents will be needed, aren't sure where to begin, or have already started the process and want to make sure you are moving in the right direction.",
+      "section1Title": "Who this service is for",
+      "section1": [
+        "individual entrepreneurs (IE)",
+        "those planning to start activities in Georgia",
+        "foreign nationals who intend to work in Georgia",
+        "employers who plan to hire a foreign employee"
+      ],
+      "section2Title": "What we help with",
+      "section2": [
+        "we determine whether a work permit is required specifically in your case",
+        "we explain which route fits your type of activity",
+        "we review documents and provide a clear checklist",
+        "we support you at the start of the process and in further steps"
+      ],
+      "section3Title": "What problem this service solves",
+      "section3": "If you don't know where to start, which route suits you specifically, which documents are needed and how to organise the process without mistakes from the very beginning, this service helps remove that uncertainty and properly organise the process.",
+      "ctaText": "Contact us for an initial assessment and we will advise which route fits your specific case.",
+      "includes": {
+        "0": { "title": "Application Readiness Check", "desc": "We review your situation and confirm eligibility before any documents are submitted." },
+        "1": { "title": "Document Review & Corrections", "desc": "All papers are checked for errors and gaps to meet current Georgian requirements." },
+        "2": { "title": "Filing Guidance", "desc": "Step-by-step instructions and direct support throughout the submission process." },
+        "3": { "title": "Status Follow-up", "desc": "We monitor your application and handle any authority requests on your behalf." }
+      }
+    },
+    "residence-permit": {
+      "title": "Residence Permit",
+      "short": "We help determine the grounds for a residence permit in Georgia, collect the right documents and start the process without unnecessary mistakes or delays.",
+      "heroShort": "Grounds, requirements and application process.",
+      "buttonText": "Initial Assessment",
+      "internalTitle": "Residence Permit Support",
+      "description": "A residence permit in Georgia is not issued simply upon request — it requires a specific legal basis. The most common mistake at the start is choosing the wrong basis, which leads to wasted time, unnecessary documents or a delayed application. We help you understand from the very beginning whether you have a suitable basis, which application route fits your case and how to organise the process correctly.",
+      "description2": "This service is especially useful if you want to apply for a residence permit based on IE or entrepreneurial activity, employment, real estate, as an IT specialist, through family reunification or on any other legal basis. We analyse your situation, review your documents and help you put together a clear, working application package.",
+      "section1Title": "When this service is especially relevant",
+      "section1": [
+        "if you are applying for a residence permit based on IE or entrepreneurial activity",
+        "if you are applying for a residence permit through employment",
+        "if you are considering a residence permit through real estate",
+        "if you are applying as an IT specialist",
+        "if you are applying for a residence permit through family reunification",
+        "if you have already started the process and want to make sure you chose the right basis"
+      ],
+      "section2Title": "What we provide",
+      "section2": [
+        "we determine the suitable basis for your application",
+        "we explain which route best fits your specific situation",
+        "we review documents and provide a clear checklist",
+        "we help prepare the application package",
+        "we guide you through the next steps after submission"
+      ],
+      "section3Title": "What problem this service solves",
+      "section3": "If you are not sure whether you are eligible for a residence permit, don't know which basis to choose, worry about document errors or want to organise the process correctly from the start, we help remove that uncertainty and turn it into a clear working plan.",
+      "section4Title": "Official government timelines and fees",
+      "section4": "For most residence permit categories:",
+      "section4Items": [
+        "30 calendar days — 300 GEL",
+        "20 calendar days — 450 GEL",
+        "10 calendar days — 600 GEL"
+      ],
+      "ctaText": "Request an initial assessment and we will advise whether you have a suitable basis for a residence permit and how to best start the process in your case.",
+      "includes": {
+        "0": { "title": "Package Preparation", "desc": "We verify all documents needed for your residence permit." },
+        "1": { "title": "Renewals & Change Support", "desc": "Renewal support when your status or circumstances change." },
+        "2": { "title": "Document Coordination", "desc": "Papers prepared in the correct format to avoid delays." },
+        "3": { "title": "Deadline Tracking", "desc": "We track critical dates so your permit never lapses." }
+      }
+    },
+    "ie-registration": {
+      "title": "IE Registration",
+      "short": "Support for individual entrepreneurs (IE) registration for foreigners in Georgia.",
+      "heroShort": "Registration, setup and start of business activity.",
+      "description": "We assist you with IE registration and small-business setup essentials, including practical coordination and guidance.",
+      "includes": {
+        "0": { "title": "IE Registration Preparation", "desc": "Full support gathering and submitting all documents to register as an individual entrepreneur." },
+        "1": { "title": "Legal Address Coordination", "desc": "We help you secure a valid legal address required for the registration process." },
+        "2": { "title": "Tax & Accounting Coordination", "desc": "Introduction to basic tax obligations and connection to trusted accounting partners." },
+        "3": { "title": "Step-by-step Guidance", "desc": "Clear instructions at every stage so you always know exactly what comes next." }
+      }
+    },
+    "business-setup": {
+      "title": "Business Setup",
+      "short": "Full support when opening and structuring your business presence in Georgia.",
+      "description": "We provide end-to-end support for basic business setup so you can focus on your work while we handle the legal paperwork.",
+      "includes": {
+        "0": { "title": "Business Formation Guidance", "desc": "Expert advice on choosing the right legal entity structure for your goals." },
+        "1": { "title": "Document Checklist & Preparation", "desc": "A tailored document list and full help gathering everything needed for registration." },
+        "2": { "title": "Process Planning from Day One", "desc": "A clear roadmap of every step, timeline, and responsibility from the start." },
+        "3": { "title": "Practical Follow-up", "desc": "We stay engaged after setup to resolve any issues that arise post-registration." }
+      }
+    },
+    "employer-support": {
+      "title": "Employer Support",
+      "short": "We help companies build a structured hiring process for foreign employees in Georgia — without confusion, missed deadlines or unnecessary business risk.",
+      "buttonText": "Initial Assessment",
+      "internalTitle": "Employer Support (B2B)",
+      "description": "For employers, hiring a foreign national is not just about the hire itself — it means organising the process correctly from the start. In practice, most problems arise at this stage: unclear steps, incorrect sequencing, missed deadlines and the absence of a structured process that does not overload HR, management or operations teams.",
+      "description2": "We help companies turn this into a clear and manageable process. We analyse your specific case, identify the correct procedure, review documents and support you at key stages — so that hiring foreign employees becomes a controlled business process rather than a chaotic task.",
+      "section1Title": "When this service applies",
+      "section1": [
+        "when the company plans to hire a foreign employee",
+        "when a clear process needs to be built for HR or operations teams",
+        "when it is important to avoid missing mandatory steps or deadlines",
+        "when there is already confusion, delays or a risk of errors",
+        "when renewals, changes or terminations need to be organised correctly"
+      ],
+      "section2Title": "What we provide",
+      "section2": [
+        "we identify the applicable procedure for your case",
+        "we build a clear step-by-step process for the employer",
+        "we review documents and provide a practical checklist",
+        "we support you at the key stages of the process",
+        "we help monitor the process at subsequent stages"
+      ],
+      "section3Title": "What problem it solves",
+      "section3": "This service is designed for businesses that do not want to proceed by trial and error. If you need a clear structure, deadline control, the right sequence of actions and confidence that hiring a foreign employee is organised correctly — we will help eliminate uncertainty and build a reliable working system.",
+      "ctaText": "Leave a consultation request and we will outline the right process for your case.",
+      "includes": {
+        "0": { "title": "Employer-side Document Checklist", "desc": "A tailored list of everything the company must provide to sponsor a foreign employee's permit." },
+        "1": { "title": "Work Permit Process Support", "desc": "We guide your HR team through each phase of the permit application, step by step." },
+        "2": { "title": "Filing Preparation Coordination", "desc": "Documents are organised and reviewed before submission to keep the process on schedule." },
+        "3": { "title": "Ongoing Status Follow-up", "desc": "We track progress and notify your team of any updates or authority requirements." }
+      }
+    },
+    "documents-renewals": {
+      "title": "Documents & Renewals",
+      "short": "Document preparation, renewals and coordinated support across your case.",
+      "description": "Need to renew or update documents? We prepare everything carefully and coordinate your case with transparent communication.",
+      "includes": {
+        "0": { "title": "Renewal Support & Preparation", "desc": "Timely preparation of all renewal documents so you never miss a critical deadline." },
+        "1": { "title": "Document Readiness Review", "desc": "A thorough check of your documents to identify anything missing or outdated." },
+        "2": { "title": "Corrections & Final Checks", "desc": "We review and correct any errors before documents are submitted to the authority." },
+        "3": { "title": "Coordination Throughout", "desc": "Continuous updates so you always know where your case stands." }
+      }
+    }
+  },
+  "categories": {
+    "work-permit": "Employment",
+    "residence-permit": "Immigration",
+    "ie-registration": "Business",
+    "business-setup": "Business",
+    "employer-support": "Hiring",
+    "documents-renewals": "Documents"
+  },
+  "about": {
+    "label": "About Us",
+    "heading1": "We help people",
+    "heading2": "find their place",
+    "heading3": "in Georgia",
+    "body1": "Founded in 2014, Stay & Work Georgia has been providing professional support to foreign nationals, entrepreneurs, employers and companies navigating work permits, residence permits, Individual Entrepreneur (IE) registration and business setup in Georgia.",
+    "body2": "Trusted by both individuals and businesses, we manage each case with a structured, step-by-step approach — from initial assessment and document preparation to filing guidance, coordination and follow-up. Our work is defined by clear communication, careful preparation, confidentiality and reliable support tailored to the specific needs of each client.",
+    "highlights": {
+      "languages": { "title": "English · Georgian · Russian", "sub": "Languages" },
+      "confidential": { "title": "Full confidentiality", "sub": "Data & privacy" },
+      "process": { "title": "Step-by-step support", "sub": "Our process" },
+      "who": { "title": "Employees, founders, freelancers", "sub": "Who we help" }
+    }
+  },
+  "detailedServices": {
+    "label": "Our Services",
+    "heading": "In Detail",
+    "getStarted": "Get Started",
+    "consultationButton": "Book a Consultation",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  },
+  "footer": {
+    "tagline": "Professional consultancy services",
+    "description": "We help foreign nationals navigate work permits, residence permits and business setup in Georgia.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "contact": "Contact",
+    "location": "Location",
+    "locationName": "Tbilisi, Georgia",
+    "copyright": "© 2026 Stay & Work Georgia. All rights reserved.",
+    "disclaimer": "Professional consultancy services. We are not a law firm."
+  }
+}

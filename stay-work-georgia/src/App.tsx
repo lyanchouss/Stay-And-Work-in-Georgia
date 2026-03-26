@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import type { NavKey } from './types'
-import { SERVICES } from './data/services'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
+import { useTranslatedServices } from './hooks/useTranslatedServices'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
 import DetailedServicesSection from './components/DetailedServicesSection'
 import Footer from './components/Footer'
+import FloatingContacts from './components/FloatingContacts'
 
 export default function App() {
   useRevealOnScroll()
+  const services = useTranslatedServices()
 
   const [mobileOpen, setMobileOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -62,11 +64,12 @@ export default function App() {
         scrollToId={scrollToId}
       />
       <main id="top">
-        <HeroSection services={SERVICES} scrollToId={scrollToId} />
+        <HeroSection services={services} scrollToId={scrollToId} />
         <AboutSection />
-        <DetailedServicesSection services={SERVICES} scrollToId={scrollToId} />
-        <Footer services={SERVICES} scrollToId={scrollToId} />
+        <DetailedServicesSection services={services} />
+        <Footer services={services} scrollToId={scrollToId} />
       </main>
+      <FloatingContacts />
     </div>
   )
 }

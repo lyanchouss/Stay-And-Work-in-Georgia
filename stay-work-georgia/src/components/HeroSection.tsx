@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import heroImage from '../assets/hero-bg.jpg'
 import workPermitSupportIcon from '../assets/Work_Permit_Support_removebg.png'
 import residencePermitSupportIcon from '../assets/Residence_Permit_Support_removebg.png'
@@ -30,6 +31,7 @@ type HeroSectionProps = {
 }
 
 export default function HeroSection({ services, scrollToId }: HeroSectionProps) {
+  const { t } = useTranslation()
   const { style: cs } = useCardStyle()
 
   const edgeShadow = [
@@ -83,7 +85,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
               {s.title}
             </div>
             <div className="mt-0.5 line-clamp-2 text-[12px] leading-[1.5]" style={{ color: 'rgba(235,230,222,0.65)' }}>
-              {s.short}
+              {t(`services.${s.key}.heroShort`, { defaultValue: s.short })}
             </div>
           </div>
           <span className="shrink-0 text-[#C9955A]"><ArrowRight className="h-4 w-4" /></span>
@@ -128,10 +130,10 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             {s.title}
           </h3>
           <p
-            className="mt-2 px-1 text-[14.5px] font-medium leading-[1.65] tracking-[0.01em] lg:text-[15.5px]"
-            style={{ color: 'rgba(235, 230, 222, 0.92)', minHeight: '60px' }}
+            className="mt-2 line-clamp-2 px-1 text-[14.5px] font-medium leading-[1.65] tracking-[0.01em] lg:text-[15.5px]"
+            style={{ color: 'rgba(235, 230, 222, 0.92)', height: '48px' }}
           >
-            {s.short}
+            {t(`services.${s.key}.heroShort`, { defaultValue: s.short })}
           </p>
           <button
             type="button"
@@ -139,7 +141,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             className="mt-2.5 inline-flex w-auto min-w-fit items-center justify-center gap-1.5 rounded-md text-[14px] font-medium text-[#d4b88a] transition-all duration-200 hover:text-[#f5dfa8] hover:bg-[rgba(201,149,90,0.18)] hover:border-[rgba(201,149,90,0.90)] hover:shadow-[0_0_12px_rgba(201,149,90,0.30)] hover:-translate-y-px active:translate-y-0 active:shadow-none"
             style={{ padding: '10px 22px', height: '44px', border: '1.5px solid rgba(201,149,90,0.65)', background: 'rgba(201,149,90,0.10)' }}
           >
-            Learn More
+            {t('hero.learnMore')}
             <ArrowRight className="h-3 w-3 shrink-0" />
           </button>
         </div>
@@ -150,7 +152,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
   const ctaContent = (
     <>
       <h3 className="text-center font-['Montserrat'] text-[37px] font-medium tracking-tight text-[#EADFD0] sm:text-[46px]" style={{ lineHeight: '1.35' }}>
-        Get a consultation right now
+        {t('hero.cta.title')}
       </h3>
       <div className="mt-5 flex items-center justify-center gap-3">
         <div className="h-px w-10 rounded-full" style={{ background: 'linear-gradient(to right, transparent, rgba(201,149,90,0.25))' }} />
@@ -169,7 +171,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4.5 w-4.5 text-[#d7b183]">
             <path d="M3 4.2A1.2 1.2 0 0 1 4.2 3h1.6a1 1 0 0 1 .95.72l.65 2.34a1 1 0 0 1-.43 1.1l-1.2.74a9.4 9.4 0 0 0 4.32 4.32l.74-1.2a1 1 0 0 1 1.1-.43l2.34.65a1 1 0 0 1 .72.95v1.6A1.2 1.2 0 0 1 14.8 17 11.8 11.8 0 0 1 3 5.2z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Call
+          {t('hero.cta.call')}
         </a>
         <a
           href="https://wa.me/995555123456"
@@ -183,7 +185,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             <path d="M10 3.2a6.8 6.8 0 0 0-5.93 10.1L3 17l3.86-1.03A6.8 6.8 0 1 0 10 3.2z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M7.7 8.2c.2-.3.4-.3.6-.3.1 0 .2 0 .3.2l.7 1.1c.1.1.1.3 0 .4l-.3.5c.4.8 1 1.3 1.8 1.8l.5-.3c.1-.1.3-.1.4 0l1.1.7c.2.1.2.2.2.3 0 .2 0 .4-.3.6-.3.2-.8.4-1.2.3-1-.2-2-.9-2.9-1.8-.9-.9-1.6-1.9-1.8-2.9-.1-.4.1-.9.3-1.2z" fill="currentColor" />
           </svg>
-          WhatsApp
+          {t('hero.cta.whatsapp')}
         </a>
         <a
           href="mailto:info@stayworkgeorgia.com"
@@ -195,7 +197,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.4" />
             <path d="M3.5 6l5.45 4.37a1.7 1.7 0 0 0 2.1 0L16.5 6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Email
+          {t('hero.cta.email')}
         </a>
       </div>
     </>
@@ -224,17 +226,17 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             className="absolute inset-x-0 bottom-0"
             style={{ height: '65%', background: bottomFadeGradient }}
           />
-          <div className="relative px-6 pb-20 pt-[64px] text-center">
+          <div className="relative px-6 pb-20 pt-[120px] text-center">
             <span className="relative -top-4 inline-block font-['Inter'] text-[13px] font-medium uppercase tracking-[3px] text-[#C9955A]">
-              RESIDENCE &amp; WORK PERMIT SUPPORT
+              {t('hero.eyebrow')}
             </span>
             <h1
               className="mx-auto -mt-6 text-center font-['Playfair_Display'] font-semibold leading-[1.15] text-[#EADFD0]"
               style={{ fontSize: 'clamp(34px, 9vw, 48px)' }}
             >
-              <span className="text-[#EADFD0]">WORK AND STAY</span>
+              <span className="text-[#EADFD0]">{t('hero.titleLine1')}</span>
               <br />
-              <em className="not-italic font-bold text-[#D4A76B]">IN GEORGIA</em>
+              <em className="not-italic font-bold text-[#D4A76B]">{t('hero.titleLine2')}</em>
             </h1>
           </div>
         </div>
@@ -242,7 +244,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         {/* Dark cards zone — 1 column */}
         <div id="services" className="scroll-mt-[100px] px-5 pb-6 pt-8">
           <div className="grid grid-cols-1 gap-3">
-            {services.map(renderMobileCard)}
+            {services.filter((_, i) => [0, 1, 2].includes(i)).map(renderMobileCard)}
           </div>
         </div>
 
@@ -270,13 +272,13 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         />
 
         <div
-          className="relative mx-auto max-w-6xl px-6 pb-[52px] pt-[60px] sm:px-10 sm:pt-[75px] lg:px-14 lg:pb-[52px]"
+          className="relative mx-auto max-w-6xl px-6 pb-[52px] pt-[120px] sm:px-10 sm:pt-[130px] lg:px-14 lg:pb-[52px]"
           style={{ zoom: 0.77 }}
         >
           <div className="text-center">
             <div className="reveal" data-reveal style={delayStyle(0)}>
               <span className="relative -top-4 inline-block font-['Inter'] text-[13px] font-medium uppercase tracking-[3px] text-[#C9955A]">
-                RESIDENCE &amp; WORK PERMIT SUPPORT
+                {t('hero.eyebrow')}
               </span>
             </div>
 
@@ -285,19 +287,27 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
               data-reveal
               style={delayStyle(80)}
             >
-              <span className="text-[#EADFD0]">WORK AND STAY</span>
+              <span className="text-[#EADFD0]">{t('hero.titleLine1')}</span>
               <br />
-              <em className="not-italic font-bold text-[#D4A76B]">IN GEORGIA</em>
+              <em className="not-italic font-bold text-[#D4A76B]">{t('hero.titleLine2')}</em>
             </h1>
+
+            <p
+              className="reveal mx-auto mt-[2px] whitespace-nowrap text-center font-['Montserrat'] text-[20px] font-light leading-[1.55] tracking-[0.18em] uppercase"
+              data-reveal
+              style={{ color: 'rgba(212, 195, 165, 0.82)', ...delayStyle(100) }}
+            >
+              {t('hero.slogan')}
+            </p>
 
             <div
               id="services"
-              className="reveal mx-auto mt-1 max-w-[1040px] scroll-mt-[100px]"
+              className="reveal mx-auto mt-[22px] max-w-[1040px] scroll-mt-[100px]"
               data-reveal
               style={delayStyle(120)}
             >
-              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {services.map(renderServiceCard)}
+              <div className="grid gap-5 md:grid-cols-3">
+                {services.filter((_, i) => [0, 1, 2].includes(i)).map(renderServiceCard)}
               </div>
             </div>
 

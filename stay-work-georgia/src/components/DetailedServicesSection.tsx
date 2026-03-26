@@ -1,24 +1,38 @@
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import type { Service } from '../types'
 import { delayStyle } from '../types'
 import { ArrowRight } from '../icons'
-import { useServiceCardStyle } from '../hooks/useServiceCardStyle'
 
 type DetailedServicesSectionProps = {
   services: Service[]
-  scrollToId: (id: string) => void
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-  'work-permit': 'Employment',
-  'residence-permit': 'Immigration',
-  'ie-registration': 'Business',
-  'business-setup': 'Business',
-  'employer-support': 'Hiring',
-  'documents-renewals': 'Documents',
+function BulletList({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2">
+      {items.map((item, i) => (
+        <li key={i} className="flex items-start gap-2.5">
+          <span
+            className="mt-[5px] h-1.5 w-1.5 shrink-0 rounded-full"
+            style={{ background: 'rgba(201,149,90,0.80)' }}
+            aria-hidden="true"
+          />
+          <span style={{ fontSize: '14px', lineHeight: '1.65', color: 'rgba(220,210,195,0.82)' }}>
+            {item}
+          </span>
+        </li>
+      ))}
+    </ul>
+  )
 }
 
-export default function DetailedServicesSection({ services, scrollToId }: DetailedServicesSectionProps) {
-  const { style: cs } = useServiceCardStyle()
+const VISIBLE_KEYS = ['employer-support', 'work-permit', 'residence-permit']
+
+export default function DetailedServicesSection({ services }: DetailedServicesSectionProps) {
+  const { t, i18n } = useTranslation()
+  const [expandedKey, setExpandedKey] = useState<string | null>(null)
+  const filtered = services.filter((s) => VISIBLE_KEYS.includes(s.key))
 
   return (
     <section
@@ -32,22 +46,25 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
         {/* Section header */}
         <div className="reveal mb-10" data-reveal style={delayStyle(0)}>
           <span style={{ fontSize: '17px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#C9955A' }}>
-            Our Services
+            {t('detailedServices.label')}
           </span>
           <h2
             className="mt-16 font-['Playfair_Display'] font-semibold leading-tight"
             style={{ fontSize: 'clamp(21px, 2.5vw, 34px)', color: '#ffffff' }}
           >
-            In Detail
+            {t('detailedServices.heading')}
           </h2>
           <div className="mt-4 h-px w-14 rounded-full" style={{ background: 'linear-gradient(to right, #C9955A, rgba(201,149,90,0.15))' }} />
         </div>
 
         {/* Service blocks */}
         <div className="space-y-12">
-          {services.map((s, idx) => {
+          {filtered.map((s, idx) => {
             const Icon = s.icon
-            const category = CATEGORY_LABELS[s.key] ?? 'Services'
+            const category = t(`categories.${s.key}`, { defaultValue: 'Services' })
+            const section1 = t(`services.${s.key}.section1`, { returnObjects: true, defaultValue: [] }) as string[]
+            const section2 = t(`services.${s.key}.section2`, { returnObjects: true, defaultValue: [] }) as string[]
+
             return (
               <div
                 key={s.key}
@@ -56,106 +73,218 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
                 data-reveal
                 style={delayStyle(60 + idx * 60)}
               >
-                <div className="grid gap-8 lg:grid-cols-[240px_1fr] lg:gap-16 xl:grid-cols-[260px_1fr]">
+                <div>
+                    {/* Card: category + icon + title + short + button */}
+                    <div
+                      className="rounded-xl p-6 sm:p-8"
+                      style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.07)' }}
+                    >
+                      <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-8">
+                        {/* Icon + title + description */}
+                        <div className="flex flex-1 flex-col gap-4">
+                          <div>
+                            <div style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '10px' }}>
+                              {category}
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <div
+                                className="shrink-0 rounded-lg"
+                                style={{ width: '54px', height: '54px', background: 'rgba(201,149,90,0.10)', border: '1.5px solid rgba(201,149,90,0.35)', color: '#C9955A', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                              >
+                                <Icon className="block h-[28px] w-[28px]" style={{ marginLeft: '3px', marginTop: '3px' }} />
+                              </div>
+                              <h3
+                                className="font-['Playfair_Display'] font-bold leading-tight"
+                                style={{ fontSize: 'clamp(19px, 2.2vw, 26px)', color: '#ffffff' }}
+                              >
+                                {t(`services.${s.key}.internalTitle`, { defaultValue: s.title })}
+                              </h3>
+                            </div>
+                          </div>
 
-                  {/* ── Left panel ── */}
-                  <div className="flex flex-col gap-4">
-
-                    {/* Category + Icon + Title */}
-                    <div>
-                      <div
-                        style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '10px' }}
-                      >
-                        {category}
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div
-                          className="shrink-0 rounded-lg"
-                          style={{
-                            width: '54px',
-                            height: '54px',
-                            background: 'rgba(201,149,90,0.10)',
-                            border: '1.5px solid rgba(201,149,90,0.35)',
-                            color: '#C9955A',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                          }}
-                        >
-                          <Icon className="block h-[28px] w-[28px]" style={{ marginLeft: '3px', marginTop: '3px' }} />
+                          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(220,210,195,0.72)' }}>
+                            {s.short}
+                          </p>
                         </div>
-                        <h3
-                          className="font-['Playfair_Display'] font-bold leading-tight"
-                          style={{ fontSize: 'clamp(19px, 2.2vw, 26px)', color: '#ffffff' }}
+
+                        {/* Button */}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const willOpen = expandedKey !== s.key
+                            setExpandedKey(willOpen ? s.key : null)
+                            if (willOpen) {
+                              // Scroll to card top immediately, before animation pushes content down
+                              requestAnimationFrame(() => {
+                                const el = document.getElementById(s.detailedId)
+                                if (el) {
+                                  const top = el.getBoundingClientRect().top + window.scrollY - 100
+                                  window.scrollTo({ top, behavior: 'instant' as ScrollBehavior })
+                                }
+                              })
+                            }
+                          }}
+                          className={`inline-flex w-auto shrink-0 items-center justify-center gap-1.5 self-start rounded-md text-[13px] font-medium text-[#d4b88a] transition-all duration-200 hover:text-[#f5dfa8] hover:bg-[rgba(201,149,90,0.18)] hover:border-[rgba(201,149,90,0.90)] hover:shadow-[0_0_12px_rgba(201,149,90,0.30)] hover:-translate-y-px active:translate-y-0 active:shadow-none sm:mt-8${expandedKey === s.key ? '' : ' cta-pulse-btn'}`}
+                          style={{ padding: '8px 18px', height: '38px', border: '1.5px solid rgba(201,149,90,0.65)', background: expandedKey === s.key ? 'rgba(201,149,90,0.22)' : 'rgba(201,149,90,0.10)' }}
                         >
-                          {s.title}
-                        </h3>
+                          {t(`services.${s.key}.buttonText`, { defaultValue: t('detailedServices.consultationButton') })}
+                          <span
+                            className="inline-flex transition-transform duration-300"
+                            style={{ transform: expandedKey === s.key ? 'rotate(90deg)' : 'rotate(0deg)' }}
+                          >
+                            <ArrowRight className="h-3 w-3 shrink-0" />
+                          </span>
+                        </button>
                       </div>
                     </div>
 
-                    {/* Description */}
-                    <p style={{ fontSize: '13px', lineHeight: '1.65', color: 'rgba(255,255,255,0.60)' }}>
-                      {s.description}
-                    </p>
-
-                    {/* CTA */}
-                    <button
-                      type="button"
-                      onClick={() => scrollToId('top')}
-                      className="mt-auto inline-flex w-auto min-w-fit items-center justify-center gap-1.5 rounded-md text-[13px] font-medium text-[#d4b88a] transition-all duration-200 hover:text-[#f5dfa8] hover:bg-[rgba(201,149,90,0.18)] hover:border-[rgba(201,149,90,0.90)] hover:shadow-[0_0_12px_rgba(201,149,90,0.30)] hover:-translate-y-px active:translate-y-0 active:shadow-none"
-                      style={{ padding: '8px 18px', height: '38px', border: '1.5px solid rgba(201,149,90,0.65)', background: 'rgba(201,149,90,0.10)' }}
+                    {/* Expandable detailed content below */}
+                    <div
+                      className="overflow-hidden transition-all duration-500 ease-in-out"
+                      style={{
+                        maxHeight: expandedKey === s.key ? '2000px' : '0px',
+                        opacity: expandedKey === s.key ? 1 : 0,
+                      }}
                     >
-                      Get Started
-                      <ArrowRight className="h-3 w-3 shrink-0" />
-                    </button>
-                  </div>
+                      <div className="flex flex-col gap-6 pt-8">
 
-                  {/* ── Right panel: includes ── */}
-                  <div
-                    className="grid grid-cols-1 sm:grid-cols-2"
-                    style={{
-                      columnGap: `${cs.gap}px`,
-                      rowGap: '18px',
-                      alignItems: 'stretch',
-                    }}
-                  >
-                    {s.whatsIncluded.map((item) => (
-                      <div
-                        key={item.title}
-                        className="group flex flex-col gap-1 transition-all duration-200"
-                        style={{
-                          padding: `${cs.paddingY}px ${cs.paddingX}px`,
-                          borderRadius: `${cs.radius}px`,
-                          width: `${cs.cardWidth}%`,
-                          height: cs.cardHeight > 0 ? `${cs.cardHeight}px` : undefined,
-                          overflow: cs.cardHeight > 0 ? 'hidden' : undefined,
-                          background: 'rgba(255,255,255,0.03)',
-                          border: '1px solid rgba(255,255,255,0.07)',
-                        }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,149,90,0.28)' }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(255,255,255,0.07)' }}
-                      >
-                        {/* Checkmark + Title */}
-                        <div className="flex items-center gap-2">
-                          <svg viewBox="0 0 14 14" fill="none" className="h-3 w-3 shrink-0" aria-hidden="true" style={{ color: '#C9955A' }}>
-                            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                          <div style={{ fontSize: `${cs.titleSize}px`, fontWeight: 500, lineHeight: '1.4', color: '#ffffff' }}>
-                            {item.title}
+                        {/* Description paragraphs */}
+                        <div className="space-y-4">
+                          <p style={{ fontSize: '15px', lineHeight: '1.75', color: 'rgba(220,210,195,0.80)' }}>
+                            {t(`services.${s.key}.description`)}
+                          </p>
+                          {i18n.exists(`services.${s.key}.description2`) && (
+                            <p style={{ fontSize: '15px', lineHeight: '1.75', color: 'rgba(220,210,195,0.80)' }}>
+                              {t(`services.${s.key}.description2`)}
+                            </p>
+                          )}
+                          {i18n.exists(`services.${s.key}.description3`) && (
+                            <p style={{ fontSize: '15px', lineHeight: '1.75', color: 'rgba(220,210,195,0.80)' }}>
+                              {t(`services.${s.key}.description3`)}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Divider */}
+                        <div className="h-px w-full" style={{ background: 'rgba(255,255,255,0.06)' }} />
+
+                        {/* Two-column bullet sections */}
+                        <div className="grid gap-6 sm:grid-cols-2">
+                          {/* Section 1 */}
+                          <div>
+                            <div
+                              className="mb-3 text-[12px] font-semibold uppercase tracking-[0.12em]"
+                              style={{ color: '#C9A96E' }}
+                            >
+                              {t(`services.${s.key}.section1Title`)}
+                            </div>
+                            <BulletList items={section1} />
+                          </div>
+
+                          {/* Section 2 */}
+                          <div>
+                            <div
+                              className="mb-3 text-[12px] font-semibold uppercase tracking-[0.12em]"
+                              style={{ color: '#C9A96E' }}
+                            >
+                              {t(`services.${s.key}.section2Title`)}
+                            </div>
+                            <BulletList items={section2} />
                           </div>
                         </div>
-                        {/* Description */}
-                        <div style={{ fontSize: `${cs.descSize}px`, lineHeight: '1.55', color: 'rgba(255,255,255,0.50)' }}>
-                          {item.desc}
+
+                        {/* Section 3: what problem it solves */}
+                        <div
+                          className="rounded-xl p-5"
+                          style={{ background: 'rgba(201,149,90,0.05)', border: '1px solid rgba(201,149,90,0.14)' }}
+                        >
+                          <div
+                            className="mb-2 text-[12px] font-semibold uppercase tracking-[0.12em]"
+                            style={{ color: '#C9A96E' }}
+                          >
+                            {t(`services.${s.key}.section3Title`)}
+                          </div>
+                          <p style={{ fontSize: '14px', lineHeight: '1.75', color: 'rgba(220,210,195,0.78)', margin: 0 }}>
+                            {t(`services.${s.key}.section3`)}
+                          </p>
                         </div>
+
+                        {/* Section 4: fees/tariffs (optional) */}
+                        {i18n.exists(`services.${s.key}.section4Title`) && (
+                          <div
+                            className="rounded-xl p-5"
+                            style={{ background: 'rgba(201,149,90,0.05)', border: '1px solid rgba(201,149,90,0.14)' }}
+                          >
+                            <div
+                              className="mb-2 text-[12px] font-semibold uppercase tracking-[0.12em]"
+                              style={{ color: '#C9A96E' }}
+                            >
+                              {t(`services.${s.key}.section4Title`)}
+                            </div>
+                            <p style={{ fontSize: '14px', lineHeight: '1.75', color: 'rgba(220,210,195,0.78)', margin: 0 }}>
+                              {t(`services.${s.key}.section4`)}
+                            </p>
+                            {i18n.exists(`services.${s.key}.section4Items`) && (
+                              <ul className="mt-3 space-y-1.5">
+                                {(t(`services.${s.key}.section4Items`, { returnObjects: true }) as string[]).map((item, j) => (
+                                  <li key={j} className="flex items-start gap-2.5">
+                                    <span
+                                      className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full"
+                                      style={{ background: 'rgba(201,149,90,0.80)' }}
+                                      aria-hidden="true"
+                                    />
+                                    <span style={{ fontSize: '14px', lineHeight: '1.65', color: 'rgba(220,210,195,0.82)' }}>
+                                      {item}
+                                    </span>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        )}
+
+                        {/* CTA */}
+                        <div
+                          className="rounded-xl p-5 text-center"
+                          style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)' }}
+                        >
+                          <p style={{ fontSize: '14.5px', lineHeight: '1.65', fontWeight: 500, color: 'rgba(220,210,195,0.78)', margin: 0 }}>
+                            {t(`services.${s.key}.ctaText`)}
+                          </p>
+                          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+                            <a
+                              href="https://wa.me/995555123456"
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex h-9 w-[140px] items-center justify-center gap-1.5 rounded-md text-[12px] font-medium leading-none transition-all duration-200 hover:-translate-y-px"
+                              style={{ background: 'rgba(37,211,102,0.10)', border: '1px solid rgba(37,211,102,0.25)', color: '#a8d8b4' }}
+                            >
+                              <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5 shrink-0" aria-hidden="true">
+                                <path d="M10 3.2a6.8 6.8 0 0 0-5.93 10.1L3 17l3.86-1.03A6.8 6.8 0 1 0 10 3.2z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M7.7 8.2c.2-.3.4-.3.6-.3.1 0 .2 0 .3.2l.7 1.1c.1.1.1.3 0 .4l-.3.5c.4.8 1 1.3 1.8 1.8l.5-.3c.1-.1.3-.1.4 0l1.1.7c.2.1.2.2.2.3 0 .2 0 .4-.3.6-.3.2-.8.4-1.2.3-1-.2-2-.9-2.9-1.8-.9-.9-1.6-1.9-1.8-2.9-.1-.4.1-.9.3-1.2z" fill="currentColor" />
+                              </svg>
+                              {t('detailedServices.whatsapp')}
+                            </a>
+                            <a
+                              href="mailto:info@stayworkgeorgia.com"
+                              className="inline-flex h-9 w-[140px] items-center justify-center gap-1.5 rounded-md text-[12px] font-medium leading-none transition-all duration-200 hover:-translate-y-px"
+                              style={{ background: 'rgba(201,149,90,0.08)', border: '1px solid rgba(201,149,90,0.25)', color: '#d4b88a' }}
+                            >
+                              <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5 shrink-0" aria-hidden="true">
+                                <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.4" />
+                                <path d="M3.5 6l5.45 4.37a1.7 1.7 0 0 0 2.1 0L16.5 6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                              {t('detailedServices.email')}
+                            </a>
+                          </div>
+                        </div>
+
                       </div>
-                    ))}
+                    </div>
                   </div>
 
-                </div>
-
                 {/* Divider between services */}
-                {idx < services.length - 1 && (
+                {idx < filtered.length - 1 && (
                   <div
                     className="mt-12 h-px w-full"
                     style={{ background: 'linear-gradient(to right, transparent, rgba(201,149,90,0.18), transparent)' }}
@@ -166,7 +295,6 @@ export default function DetailedServicesSection({ services, scrollToId }: Detail
           })}
         </div>
       </div>
-
     </section>
   )
 }
