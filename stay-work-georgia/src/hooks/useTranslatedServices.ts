@@ -10,7 +10,7 @@ export function useTranslatedServices(): Service[] {
     title: t(`services.${s.key}.title`),
     short: t(`services.${s.key}.short`),
     description: t(`services.${s.key}.description`),
-    whatsIncluded: s.whatsIncluded.map((item, i) => ({
+    whatsIncluded: s.whatsIncluded.map((_, i) => ({
       title: t(`services.${s.key}.includes.${i}.title`),
       desc: t(`services.${s.key}.includes.${i}.desc`),
     })),

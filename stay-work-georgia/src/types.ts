@@ -1,6 +1,6 @@
 import type { CSSProperties, ReactElement } from 'react'
 
-export type NavKey = 'services' | 'contact'
+export type NavKey = 'services' | 'contact' | 'about'
 
 export type Service = {
   key: string
