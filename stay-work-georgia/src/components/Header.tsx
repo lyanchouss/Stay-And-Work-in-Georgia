@@ -52,7 +52,7 @@ export default function Header({
       ].join(' ')}
     >
       <div className="relative">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2.5 sm:px-10 lg:px-14">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-3 py-2.5 sm:px-10 lg:px-14">
           <a
             href="#top"
             onClick={(e) => {
@@ -167,11 +167,54 @@ export default function Header({
             </a>
           </nav>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            {/* Mobile language switcher (globe) */}
+            <div className="relative">
+              <button
+                type="button"
+                aria-label="Language"
+                onClick={() => setLangOpen((v) => !v)}
+                className="inline-flex h-8 min-w-8 items-center justify-center px-2 transition hover:opacity-90"
+              >
+                <span className="text-[12px] font-semibold tracking-[0.12em]" style={{ color: '#C8A45C' }}>
+                  {currentLang.label}
+                </span>
+              </button>
+
+              {langOpen && (
+                <div
+                  className="absolute right-0 top-full mt-2 overflow-hidden rounded-lg py-1"
+                  style={{
+                    background: 'rgba(4, 8, 26, 0.95)',
+                    backdropFilter: 'blur(16px)',
+                    border: '1px solid rgba(200,160,80,0.15)',
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                    minWidth: '72px',
+                    zIndex: 60,
+                  }}
+                >
+                  {LANGS.map((l) => (
+                    <button
+                      key={l.code}
+                      type="button"
+                      onClick={() => switchLang(l.code)}
+                      className={`w-full px-4 py-1.5 text-left text-[12px] font-medium transition hover:bg-white/[0.06] ${currentLang.code === l.code ? 'text-[#C8A45C]' : 'text-white/70'}`}
+                    >
+                      {l.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Burger button */}
             <button
               type="button"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-              onClick={() => setMobileOpen((v) => !v)}
+              onClick={() => {
+                setLangOpen(false)
+                setMobileOpen((v) => !v)
+              }}
               className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-white/80 transition hover:text-white"
             >
               <span className="sr-only">Menu</span>
@@ -292,24 +335,7 @@ export default function Header({
                 +995 555 001 017
               </a>
 
-              {/* Mobile language switcher */}
-              <div className="mt-3 flex gap-2 px-1">
-                {LANGS.map((l) => (
-                  <button
-                    key={l.code}
-                    type="button"
-                    onClick={() => switchLang(l.code)}
-                    className={`rounded-full border px-4 py-2 text-[13px] font-semibold transition ${
-                      currentLang.code === l.code
-                        ? 'border-[#C8A45C]/60 text-[#C8A45C]'
-                        : 'border-white/15 text-white/60 hover:text-white/90'
-                    }`}
-                    style={{ background: currentLang.code === l.code ? 'rgba(201,149,90,0.12)' : 'rgba(255,255,255,0.02)' }}
-                  >
-                    {l.label}
-                  </button>
-                ))}
-              </div>
+              {/* Language switcher moved to header (globe) */}
             </div>
           </div>
         </div>
