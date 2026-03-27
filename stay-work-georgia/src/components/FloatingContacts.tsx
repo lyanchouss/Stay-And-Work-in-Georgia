@@ -14,7 +14,7 @@ const CONTACTS = [
     ),
   },
   {
-    href: 'tel:+995555123456',
+    href: 'tel:+995555001017',
     label: 'Phone',
     color: '#C8A45C',
     target: undefined,
@@ -37,7 +37,7 @@ const CONTACTS = [
     ),
   },
   {
-    href: 'https://wa.me/995555123456',
+    href: 'https://wa.me/995555001017',
     label: 'WhatsApp',
     color: '#25D366',
     target: '_blank',

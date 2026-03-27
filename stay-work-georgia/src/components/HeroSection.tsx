@@ -163,7 +163,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
       </div>
       <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <a
-          href="tel:+995555123456"
+          href="tel:+995555001017"
           className="inline-flex items-center justify-center gap-2 rounded-xl border px-7 py-4 text-[20px] font-medium transition-all duration-200 hover:bg-white/[0.08] hover:border-[rgba(201,149,90,0.45)] hover:-translate-y-px"
           style={{ borderColor: 'rgba(201, 149, 90, 0.22)', background: 'rgba(15, 25, 35, 0.45)', color: '#EADFD0' }}
           aria-label="Call"
@@ -174,7 +174,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
           {t('hero.cta.call')}
         </a>
         <a
-          href="https://wa.me/995555123456"
+          href="https://wa.me/995555001017"
           target="_blank"
           rel="noreferrer"
           className="relative inline-flex items-center justify-center gap-2 rounded-xl border px-7 py-4 text-[20px] font-semibold transition-all duration-200 hover:bg-white/[0.10] hover:-translate-y-0.5"
@@ -226,7 +226,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             className="absolute inset-x-0 bottom-0"
             style={{ height: '65%', background: bottomFadeGradient }}
           />
-          <div className="relative px-6 pb-20 pt-[120px] text-center">
+          <div className="relative px-6 pb-[17.02px] pt-[120px] text-center">
             <span className="relative -top-4 inline-block font-['Inter'] text-[13px] font-medium uppercase tracking-[3px] text-[#C9955A]">
               {t('hero.eyebrow')}
             </span>
@@ -242,7 +242,10 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         </div>
 
         {/* Dark cards zone — 1 column */}
-        <div id="services" className="scroll-mt-[100px] px-5 pb-6 pt-8">
+        <div
+          id="services"
+          className="scroll-mt-[100px] px-5 pb-6 pt-[20.52px] md:pt-8"
+        >
           <div className="grid grid-cols-1 gap-3">
             {services.filter((_, i) => [0, 1, 4].includes(i)).map(renderMobileCard)}
           </div>

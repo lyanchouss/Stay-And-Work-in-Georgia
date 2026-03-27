@@ -253,7 +253,7 @@ export default function DetailedServicesSection({ services }: DetailedServicesSe
                           </p>
                           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
                             <a
-                              href="https://wa.me/995555123456"
+                              href="https://wa.me/995555001017"
                               target="_blank"
                               rel="noreferrer"
                               className="inline-flex h-9 w-[140px] items-center justify-center gap-1.5 rounded-md text-[12px] font-medium leading-none transition-all duration-200 hover:-translate-y-px"
