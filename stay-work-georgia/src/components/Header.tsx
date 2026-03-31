@@ -66,44 +66,39 @@ export default function Header({
           </a>
 
           <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
-            <a
-              href="#services"
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToId('services')
-              }}
-              className={`${navButton} ${activeNav === 'services' ? 'text-white' : ''}`}
-            >
-              <span className="relative">
-                {t('nav.services')}
-                <span
-                  aria-hidden="true"
-                  className={[
-                    'absolute left-0 -bottom-[4px] h-[1.5px] w-full origin-left scale-x-0 bg-[#C8A45C] transition-transform duration-300',
-                    activeNav === 'services' ? 'scale-x-100' : 'hover:scale-x-100',
-                  ].join(' ')}
-                />
-              </span>
-            </a>
-            <a
-              href="#about"
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToId('about')
-              }}
-              className={`${navButton} ${activeNav === 'about' ? 'text-white' : ''}`}
-            >
-              <span className="relative">
-                {t('nav.aboutUs')}
-                <span
-                  aria-hidden="true"
-                  className={[
-                    'absolute left-0 -bottom-[4px] h-[1.5px] w-full origin-left scale-x-0 bg-[#C8A45C] transition-transform duration-300',
-                    activeNav === 'about' ? 'scale-x-100' : 'hover:scale-x-100',
-                  ].join(' ')}
-                />
-              </span>
-            </a>
+            {([
+              { id: 'services', label: t('nav.services') },
+              { id: 'about', label: t('nav.aboutUs') },
+              { id: 'faq', label: t('nav.faq') },
+              { id: 'contact', label: t('nav.contact') },
+            ] as const).map((item, idx, arr) => (
+              <div key={item.id} className="flex items-center">
+                <a
+                  href={`#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToId(item.id)
+                  }}
+                  className={`${navButton} ${activeNav === item.id ? 'text-white' : ''}`}
+                >
+                  <span className="relative">
+                    {item.label}
+                    <span
+                      aria-hidden="true"
+                      className={[
+                        'absolute left-0 -bottom-[4px] h-[1.5px] w-full origin-left scale-x-0 bg-[#C8A45C] transition-transform duration-300',
+                        activeNav === item.id ? 'scale-x-100' : 'hover:scale-x-100',
+                      ].join(' ')}
+                    />
+                  </span>
+                </a>
+                {idx < arr.length - 1 && (
+                  <span className="px-1 text-white/25" aria-hidden="true">
+                    |
+                  </span>
+                )}
+              </div>
+            ))}
 
             {/* Language switcher */}
             <div className="relative ml-2">
@@ -315,6 +310,22 @@ export default function Header({
                 style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}
               >
                 {t('nav.aboutUs')}
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollToId('faq')}
+                className="rounded-xl px-4 py-4 text-left text-[18px] font-medium text-white/85 transition hover:text-white"
+                style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}
+              >
+                {t('nav.faq')}
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollToId('contact')}
+                className="rounded-xl px-4 py-4 text-left text-[18px] font-medium text-white/85 transition hover:text-white"
+                style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}
+              >
+                {t('nav.contact')}
               </button>
               <a
                 href="tel:+995555001017"

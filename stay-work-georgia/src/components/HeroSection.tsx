@@ -83,6 +83,11 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
           <div className="min-w-0 flex-1">
             <div className="text-[15px] font-bold leading-tight" style={{ color: 'rgba(255,255,255,0.97)' }}>
               {s.title}
+              {s.key === 'employer-support' && (
+                <span className="ml-1 align-[0.04em] text-[12px] font-semibold tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.97)' }}>
+                  (B2B)
+                </span>
+              )}
             </div>
             <div className="mt-0.5 line-clamp-2 text-[12px] leading-[1.5]" style={{ color: 'rgba(235,230,222,0.65)' }}>
               {t(`services.${s.key}.heroShort`, { defaultValue: s.short })}
@@ -110,7 +115,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-0 rounded-b-[inherit]" style={{ height: '55%', background: `linear-gradient(to top, ${vc(cs.hue, cs.saturation, cs.bottomEdge)}, transparent)` }} />
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 rounded-t-[inherit]" style={{ height: '55%', background: `linear-gradient(to bottom, ${vc(cs.hue, cs.saturation, cs.topEdge)}, transparent)` }} />
 
-        <div className="relative z-[1] flex flex-col items-center text-center">
+        <div className="relative z-[1] flex h-full flex-col items-center text-center">
           {iconSrc && (
             <img
               src={iconSrc}
@@ -128,6 +133,11 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             style={{ color: 'rgba(255, 255, 255, 0.97)' }}
           >
             {s.title}
+            {s.key === 'employer-support' && (
+              <span className="ml-1 align-[0.08em] text-[14px] font-semibold tracking-[0.08em]" style={{ color: 'rgba(255, 255, 255, 0.97)' }}>
+                (B2B)
+              </span>
+            )}
           </h3>
           <p
             className="mt-2 line-clamp-2 px-1 text-[14.5px] font-medium leading-[1.65] tracking-[0.01em] lg:text-[15.5px]"
@@ -138,7 +148,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
           <button
             type="button"
             onClick={() => scrollToId(s.detailedId)}
-            className="mt-2.5 inline-flex w-auto min-w-fit items-center justify-center gap-1.5 rounded-md text-[14px] font-medium text-[#d4b88a] transition-all duration-200 hover:text-[#f5dfa8] hover:bg-[rgba(201,149,90,0.18)] hover:border-[rgba(201,149,90,0.90)] hover:shadow-[0_0_12px_rgba(201,149,90,0.30)] hover:-translate-y-px active:translate-y-0 active:shadow-none"
+            className="mt-auto inline-flex w-auto min-w-fit items-center justify-center gap-1.5 rounded-md text-[14px] font-medium text-[#d4b88a] transition-all duration-200 hover:text-[#f5dfa8] hover:bg-[rgba(201,149,90,0.18)] hover:border-[rgba(201,149,90,0.90)] hover:shadow-[0_0_12px_rgba(201,149,90,0.30)] hover:-translate-y-px active:translate-y-0 active:shadow-none"
             style={{ padding: '10px 22px', height: '44px', border: '1.5px solid rgba(201,149,90,0.65)', background: 'rgba(201,149,90,0.10)' }}
           >
             {t('hero.learnMore')}
@@ -161,44 +171,23 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
         <div className="h-px w-16 rounded-full" style={{ background: 'linear-gradient(to right, rgba(201,149,90,0.25), rgba(201,149,90,0.70), rgba(201,149,90,0.25))' }} />
         <div className="h-px w-10 rounded-full" style={{ background: 'linear-gradient(to left, transparent, rgba(201,149,90,0.25))' }} />
       </div>
-      <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <a
-          href="tel:+995555001017"
-          className="inline-flex items-center justify-center gap-2 rounded-xl border px-7 py-4 text-[20px] font-medium transition-all duration-200 hover:bg-white/[0.08] hover:border-[rgba(201,149,90,0.45)] hover:-translate-y-px"
+      <div className="mt-6 flex items-center justify-center">
+        <div
+          className="inline-flex items-center rounded-xl border px-6 py-4 text-[20px] font-medium"
           style={{ borderColor: 'rgba(201, 149, 90, 0.22)', background: 'rgba(15, 25, 35, 0.45)', color: '#EADFD0' }}
-          aria-label="Call"
         >
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4.5 w-4.5 text-[#d7b183]">
-            <path d="M3 4.2A1.2 1.2 0 0 1 4.2 3h1.6a1 1 0 0 1 .95.72l.65 2.34a1 1 0 0 1-.43 1.1l-1.2.74a9.4 9.4 0 0 0 4.32 4.32l.74-1.2a1 1 0 0 1 1.1-.43l2.34.65a1 1 0 0 1 .72.95v1.6A1.2 1.2 0 0 1 14.8 17 11.8 11.8 0 0 1 3 5.2z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          {t('hero.cta.call')}
-        </a>
-        <a
-          href="https://wa.me/995555001017"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-flex items-center justify-center gap-2 rounded-xl border px-7 py-4 text-[20px] font-semibold transition-all duration-200 hover:bg-white/[0.10] hover:-translate-y-0.5"
-          style={{ borderColor: 'rgba(80, 200, 120, 0.18)', background: 'rgba(60, 180, 100, 0.04)', color: '#e8f5ec', boxShadow: 'none', zIndex: 1 }}
-          aria-label="WhatsApp"
-        >
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-[18px] w-[18px] text-[#a8d8b4]">
-            <path d="M10 3.2a6.8 6.8 0 0 0-5.93 10.1L3 17l3.86-1.03A6.8 6.8 0 1 0 10 3.2z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M7.7 8.2c.2-.3.4-.3.6-.3.1 0 .2 0 .3.2l.7 1.1c.1.1.1.3 0 .4l-.3.5c.4.8 1 1.3 1.8 1.8l.5-.3c.1-.1.3-.1.4 0l1.1.7c.2.1.2.2.2.3 0 .2 0 .4-.3.6-.3.2-.8.4-1.2.3-1-.2-2-.9-2.9-1.8-.9-.9-1.6-1.9-1.8-2.9-.1-.4.1-.9.3-1.2z" fill="currentColor" />
-          </svg>
-          {t('hero.cta.whatsapp')}
-        </a>
-        <a
-          href="mailto:info@stayworkgeorgia.com"
-          className="inline-flex items-center justify-center gap-2 rounded-xl border px-7 py-4 text-[20px] font-medium transition-all duration-200 hover:bg-white/[0.08] hover:border-[rgba(201,149,90,0.45)] hover:-translate-y-px"
-          style={{ borderColor: 'rgba(201, 149, 90, 0.22)', background: 'rgba(15, 25, 35, 0.45)', color: '#EADFD0' }}
-          aria-label="Email"
-        >
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-[18px] w-[18px] text-[#d7b183]">
-            <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.4" />
-            <path d="M3.5 6l5.45 4.37a1.7 1.7 0 0 0 2.1 0L16.5 6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          {t('hero.cta.email')}
-        </a>
+          <a href="tel:+995555001017" className="transition hover:text-white" aria-label="Call">
+            {t('hero.cta.call')}
+          </a>
+          <span className="mx-4 text-white/40" aria-hidden="true">|</span>
+          <a href="https://wa.me/995555001017" target="_blank" rel="noreferrer" className="transition hover:text-white" aria-label="WhatsApp">
+            {t('hero.cta.whatsapp')}
+          </a>
+          <span className="mx-4 text-white/40" aria-hidden="true">|</span>
+          <a href="mailto:info@stayandwork.ge" className="transition hover:text-white" aria-label="Email">
+            {t('hero.cta.email')}
+          </a>
+        </div>
       </div>
     </>
   )

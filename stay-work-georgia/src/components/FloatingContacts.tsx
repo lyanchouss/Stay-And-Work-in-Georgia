@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const CONTACTS = [
   {
-    href: 'mailto:info@stayworkgeorgia.com',
+    href: 'mailto:info@stayandwork.ge',
     label: 'Email',
     color: '#C8A45C',
     target: undefined,

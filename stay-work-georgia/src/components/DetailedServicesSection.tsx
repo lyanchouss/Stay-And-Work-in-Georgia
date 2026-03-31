@@ -153,7 +153,7 @@ export default function DetailedServicesSection({ services }: DetailedServicesSe
                           <p style={{ fontSize: '15px', lineHeight: '1.75', color: 'rgba(220,210,195,0.80)' }}>
                             {t(`services.${s.key}.description`)}
                           </p>
-                          {i18n.exists(`services.${s.key}.description2`) && (
+                        {i18n.exists(`services.${s.key}.description2`) && t(`services.${s.key}.description2`).trim() && (
                             <p style={{ fontSize: '15px', lineHeight: '1.75', color: 'rgba(220,210,195,0.80)' }}>
                               {t(`services.${s.key}.description2`)}
                             </p>
@@ -251,31 +251,23 @@ export default function DetailedServicesSection({ services }: DetailedServicesSe
                           <p style={{ fontSize: '14.5px', lineHeight: '1.65', fontWeight: 500, color: 'rgba(220,210,195,0.78)', margin: 0 }}>
                             {t(`services.${s.key}.ctaText`)}
                           </p>
-                          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-                            <a
-                              href="https://wa.me/995555001017"
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex h-9 w-[140px] items-center justify-center gap-1.5 rounded-md text-[12px] font-medium leading-none transition-all duration-200 hover:-translate-y-px"
-                              style={{ background: 'rgba(37,211,102,0.10)', border: '1px solid rgba(37,211,102,0.25)', color: '#a8d8b4' }}
+                          <div className="mt-4 flex items-center justify-center">
+                            <div
+                              className="inline-flex items-center rounded-lg border px-4 py-2 text-[12.67px] font-medium leading-none"
+                              style={{ background: 'rgba(4,8,26,0.40)', borderColor: 'rgba(201,149,90,0.18)', color: 'rgba(234,223,208,0.92)' }}
                             >
-                              <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5 shrink-0" aria-hidden="true">
-                                <path d="M10 3.2a6.8 6.8 0 0 0-5.93 10.1L3 17l3.86-1.03A6.8 6.8 0 1 0 10 3.2z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M7.7 8.2c.2-.3.4-.3.6-.3.1 0 .2 0 .3.2l.7 1.1c.1.1.1.3 0 .4l-.3.5c.4.8 1 1.3 1.8 1.8l.5-.3c.1-.1.3-.1.4 0l1.1.7c.2.1.2.2.2.3 0 .2 0 .4-.3.6-.3.2-.8.4-1.2.3-1-.2-2-.9-2.9-1.8-.9-.9-1.6-1.9-1.8-2.9-.1-.4.1-.9.3-1.2z" fill="currentColor" />
-                              </svg>
-                              {t('detailedServices.whatsapp')}
-                            </a>
-                            <a
-                              href="mailto:info@stayworkgeorgia.com"
-                              className="inline-flex h-9 w-[140px] items-center justify-center gap-1.5 rounded-md text-[12px] font-medium leading-none transition-all duration-200 hover:-translate-y-px"
-                              style={{ background: 'rgba(201,149,90,0.08)', border: '1px solid rgba(201,149,90,0.25)', color: '#d4b88a' }}
-                            >
-                              <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5 shrink-0" aria-hidden="true">
-                                <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.4" />
-                                <path d="M3.5 6l5.45 4.37a1.7 1.7 0 0 0 2.1 0L16.5 6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                              </svg>
-                              {t('detailedServices.email')}
-                            </a>
+                              <a href="tel:+995555001017" className="transition hover:text-white" aria-label="Call">
+                                {t('hero.cta.call')}
+                              </a>
+                              <span className="mx-3 text-white/35" aria-hidden="true">|</span>
+                              <a href="https://wa.me/995555001017" target="_blank" rel="noreferrer" className="transition hover:text-white" aria-label="WhatsApp">
+                                {t('detailedServices.whatsapp')}
+                              </a>
+                              <span className="mx-3 text-white/35" aria-hidden="true">|</span>
+                              <a href="mailto:info@stayandwork.ge" className="transition hover:text-white" aria-label="Email">
+                                {t('detailedServices.email')}
+                              </a>
+                            </div>
                           </div>
                         </div>
 
