@@ -224,8 +224,10 @@
     "email": "Email Us"
   },
   "footer": {
-    "tagline": "Professional consultancy services",
-    "description": "We help foreign nationals navigate work permits, residence permits and business setup in Georgia.",
+    "tagline": "Contact Us",
+    "description": "Write to us or call us. We will quickly review your case and clearly explain the next steps.",
+    "contactPhone": "Phone / WhatsApp: +995 555 001 017",
+    "contactEmail": "Email: info@stayandwork.ge",
     "navigation": "Navigation",
     "services": "Services",
     "contact": "Contact",
@@ -239,6 +241,6 @@
     "address": "Address: Tbilisi, Shevchenko St.",
     "addressUrl": "https://maps.google.com/?q=Tbilisi%2C%20Shevchenko%20St.",
     "copyright": "© 2026 Stay & Work Georgia. All rights reserved.",
-    "disclaimer": "Professional consultancy services."
+    "disclaimer": ""
   }
 }

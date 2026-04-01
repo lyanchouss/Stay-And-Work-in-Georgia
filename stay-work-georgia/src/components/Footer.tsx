@@ -27,6 +27,20 @@ export default function Footer({ services, scrollToId }: FooterProps) {
             <p className="mt-5 text-sm leading-relaxed text-white/65">
               {t('footer.description')}
             </p>
+            <div className="mt-4 space-y-2 text-sm text-white/70">
+              <a
+                href="tel:+995555001017"
+                className="block transition hover:text-white"
+              >
+                {t('footer.contactPhone', { defaultValue: '' })}
+              </a>
+              <a
+                href="mailto:info@stayandwork.ge"
+                className="block transition hover:text-white"
+              >
+                {t('footer.contactEmail', { defaultValue: '' })}
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}
@@ -97,7 +111,9 @@ export default function Footer({ services, scrollToId }: FooterProps) {
         <div className="mt-10 border-t border-white/10 pt-6 text-sm text-white/65">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div>{t('footer.copyright')}</div>
-            <div>{t('footer.disclaimer')}</div>
+            {t('footer.disclaimer', { defaultValue: '' }) && (
+              <div>{t('footer.disclaimer')}</div>
+            )}
           </div>
         </div>
       </div>
