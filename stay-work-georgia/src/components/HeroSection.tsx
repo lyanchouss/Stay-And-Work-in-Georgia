@@ -129,7 +129,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             />
           )}
           <h3
-            className="mt-4 relative -top-0.5 text-[21px] font-extrabold leading-tight lg:text-[22px]"
+            className="relative mt-5 mb-3 -top-0.5 text-[21px] font-extrabold leading-tight lg:text-[22px]"
             style={{ color: 'rgba(255, 255, 255, 0.97)' }}
           >
             {s.title}
@@ -140,8 +140,8 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             )}
           </h3>
           <p
-            className="mt-2 line-clamp-2 px-1 text-[14.5px] font-medium leading-[1.65] tracking-[0.01em] lg:text-[15.5px]"
-            style={{ color: 'rgba(235, 230, 222, 0.92)', height: '48px' }}
+            className="mb-5 line-clamp-2 min-h-[48px] px-1 text-[14.5px] font-medium leading-[1.65] tracking-[0.01em] lg:text-[15.5px]"
+            style={{ color: 'rgba(235, 230, 222, 0.92)' }}
           >
             {t(`services.${s.key}.heroShort`, { defaultValue: s.short })}
           </p>
@@ -216,11 +216,8 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             style={{ height: '65%', background: bottomFadeGradient }}
           />
           <div className="relative px-6 pb-[17.02px] pt-[120px] text-center">
-            <span className="relative -top-4 inline-block font-['Inter'] text-[13px] font-medium uppercase tracking-[3px] text-[#C9955A]">
-              {t('hero.eyebrow')}
-            </span>
             <h1
-              className="mx-auto -mt-6 text-center font-['Playfair_Display'] font-semibold leading-[1.15] text-[#EADFD0]"
+              className="mx-auto text-center font-['Playfair_Display'] font-semibold leading-[1.15] text-[#EADFD0]"
               style={{ fontSize: 'clamp(34px, 9vw, 48px)' }}
             >
               <span className="text-[#EADFD0]">{t('hero.titleLine1')}</span>
@@ -267,15 +264,9 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
           className="relative mx-auto max-w-6xl px-6 pb-[52px] pt-[120px] sm:px-10 sm:pt-[130px] lg:px-14 lg:pb-[52px]"
           style={{ zoom: 0.77 }}
         >
-          <div className="text-center">
-            <div className="reveal" data-reveal style={delayStyle(0)}>
-              <span className="relative -top-4 inline-block font-['Inter'] text-[13px] font-medium uppercase tracking-[3px] text-[#C9955A]">
-                {t('hero.eyebrow')}
-              </span>
-            </div>
-
+          <div className="flex flex-col items-center text-center">
             <h1
-              className="reveal mx-auto -mt-10 text-center font-['Playfair_Display'] font-semibold leading-[1.15] text-[#EADFD0] [font-size:clamp(36px,5vw,52px)]"
+              className="reveal mx-auto text-center font-['Playfair_Display'] font-semibold leading-[1.15] text-[#EADFD0] [font-size:clamp(36px,5vw,52px)]"
               data-reveal
               style={delayStyle(80)}
             >
@@ -285,7 +276,7 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
             </h1>
 
             <p
-              className="reveal mx-auto mt-[2px] whitespace-nowrap text-center font-['Montserrat'] text-[20px] font-light leading-[1.55] tracking-[0.18em] uppercase"
+              className="reveal mx-auto mt-[2px] w-full max-w-[1000px] px-6 text-center font-['Montserrat'] text-[18px] font-light leading-[1.55] tracking-[0.12em] uppercase sm:px-10"
               data-reveal
               style={{ color: 'rgba(212, 195, 165, 0.82)', ...delayStyle(100) }}
             >

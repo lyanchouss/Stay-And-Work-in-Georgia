@@ -55,7 +55,7 @@ export default function Footer({ services, scrollToId }: FooterProps) {
           <div className="reveal" data-reveal style={delayStyle(180)}>
             <div className="text-sm font-semibold text-white">{t('footer.services')}</div>
             <div className="mt-4 flex flex-col gap-2.5 text-sm text-white/70">
-              {services.filter((s) => !['documents-renewals', 'business-setup'].includes(s.key)).map((s) => (
+              {services.filter((s) => !['documents-renewals', 'business-setup', 'ie-registration'].includes(s.key)).map((s) => (
                 <button
                   key={s.key}
                   type="button"

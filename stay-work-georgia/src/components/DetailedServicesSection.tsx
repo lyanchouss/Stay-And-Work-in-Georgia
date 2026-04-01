@@ -102,7 +102,10 @@ export default function DetailedServicesSection({ services }: DetailedServicesSe
                             </div>
                           </div>
 
-                          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(220,210,195,0.72)' }}>
+                          <p
+                            className="line-clamp-2"
+                            style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(220,210,195,0.72)' }}
+                          >
                             {s.short}
                           </p>
                         </div>

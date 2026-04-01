@@ -11,44 +11,28 @@
     "heading": "Frequently Asked Questions",
     "items": [
       {
-        "q": "What services do you provide?",
-        "a": "We provide structured support for work permits, residence permits, and employer-side hiring processes in Georgia. We focus on a clear start, correct procedure selection, document review, and practical guidance through key steps."
+        "q": "Do I need work authorisation in Georgia?",
+        "a": "It depends on your status, type of activity, and the basis on which you plan to operate in Georgia. We assess your specific case and explain which procedure applies."
       },
       {
-        "q": "Do I actually need a work permit in my case?",
-        "a": "Not every situation is the same. Whether you need a work permit depends on your status and how you work in Georgia. We assess your case and explain the correct route before you invest time and effort into the wrong process."
+        "q": "Can I apply if I am an individual entrepreneur (IE)?",
+        "a": "In many cases, for foreigners working as an IE or planning to start entrepreneurial activity in Georgia, it is important to assess both work authorisation and residence-related issues correctly from the outset."
       },
       {
-        "q": "What is the most common mistake people make at the start?",
-        "a": "Starting without clarity: choosing the wrong route, preparing unnecessary documents, or missing mandatory steps and deadlines. Our role is to turn uncertainty into a structured plan of action."
+        "q": "How do I know which basis applies to residence?",
+        "a": "Residence in Georgia must be based on a specific legal ground, such as employment, entrepreneurial activity, real estate, family reunification, IT status, or another category provided by law."
       },
       {
-        "q": "Can you help with residence permits based on different grounds?",
-        "a": "Yes. A residence permit requires a specific legal basis. We help identify the best-fitting basis for your case, align your documents, and organise the process correctly from the start."
+        "q": "Which documents are usually required?",
+        "a": "The required documents depend on the type of application and the legal basis. After an initial assessment, we provide a clear action plan tailored to your case."
       },
       {
-        "q": "I already started the process. Can you review what I’ve done?",
-        "a": "Yes. If you’ve already begun, we can review your current stage, check documents, identify risks or gaps, and recommend the next steps to stabilise the process."
+        "q": "Do you help employers hire foreign employees?",
+        "a": "Yes. We help employer companies with corporate support for the process, document review, identifying the applicable procedure, and organising the process correctly from the start."
       },
       {
-        "q": "Do you work with employers (B2B)?",
-        "a": "Yes. We help companies organise the hiring process for foreign employees as a controlled business workflow—reducing confusion, delays, and compliance risk, and easing pressure on HR and operations."
-      },
-      {
-        "q": "What does an initial assessment include?",
-        "a": "A focused review of your situation: what route applies, what you need to prepare, what to avoid, and what the next steps look like. The goal is a clear plan, not generic advice."
-      },
-      {
-        "q": "How do you handle confidentiality?",
-        "a": "We treat each case confidentially and keep communication clear and structured. We only request what’s necessary to assess and support your process."
-      },
-      {
-        "q": "How long does the process take?",
-        "a": "Timelines depend on the route and your readiness. During the initial assessment we outline the realistic sequence and what typically affects timing in your case."
-      },
-      {
-        "q": "How do I contact you?",
-        "a": "Use Call Us | WhatsApp | Email Us and we’ll respond with the next step for an initial assessment."
+        "q": "Do you guarantee a positive outcome?",
+        "a": "No. The final decision is made by the relevant state authority. Our role is to make sure the process is handled correctly and that errors and delays are avoided from the start."
       }
     ]
   },
@@ -255,6 +239,6 @@
     "address": "Address: Tbilisi, Shevchenko St.",
     "addressUrl": "https://maps.google.com/?q=Tbilisi%2C%20Shevchenko%20St.",
     "copyright": "© 2026 Stay & Work Georgia. All rights reserved.",
-    "disclaimer": "Professional consultancy services. We are not a law firm."
+    "disclaimer": "Professional consultancy services."
   }
 }
