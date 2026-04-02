@@ -176,11 +176,11 @@ export default function HeroSection({ services, scrollToId }: HeroSectionProps) 
           className="inline-flex items-center rounded-xl border px-6 py-4 text-[20px] font-medium"
           style={{ borderColor: 'rgba(201, 149, 90, 0.22)', background: 'rgba(15, 25, 35, 0.45)', color: '#EADFD0' }}
         >
-          <a href="tel:+995555001017" className="transition hover:text-white" aria-label="Call">
+          <a href="tel:+995555188758" className="transition hover:text-white" aria-label="Call">
             {t('hero.cta.call')}
           </a>
           <span className="mx-4 text-white/40" aria-hidden="true">|</span>
-          <a href="https://wa.me/995555001017" target="_blank" rel="noreferrer" className="transition hover:text-white" aria-label="WhatsApp">
+          <a href="https://wa.me/995555188758" target="_blank" rel="noreferrer" className="transition hover:text-white" aria-label="WhatsApp">
             {t('hero.cta.whatsapp')}
           </a>
           <span className="mx-4 text-white/40" aria-hidden="true">|</span>

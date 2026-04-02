@@ -259,11 +259,11 @@ export default function DetailedServicesSection({ services }: DetailedServicesSe
                               className="inline-flex items-center rounded-lg border px-4 py-2 text-[12.67px] font-medium leading-none"
                               style={{ background: 'rgba(4,8,26,0.40)', borderColor: 'rgba(201,149,90,0.18)', color: 'rgba(234,223,208,0.92)' }}
                             >
-                              <a href="tel:+995555001017" className="transition hover:text-white" aria-label="Call">
+                              <a href="tel:+995555188758" className="transition hover:text-white" aria-label="Call">
                                 {t('hero.cta.call')}
                               </a>
                               <span className="mx-3 text-white/35" aria-hidden="true">|</span>
-                              <a href="https://wa.me/995555001017" target="_blank" rel="noreferrer" className="transition hover:text-white" aria-label="WhatsApp">
+                              <a href="https://wa.me/995555188758" target="_blank" rel="noreferrer" className="transition hover:text-white" aria-label="WhatsApp">
                                 {t('detailedServices.whatsapp')}
                               </a>
                               <span className="mx-3 text-white/35" aria-hidden="true">|</span>

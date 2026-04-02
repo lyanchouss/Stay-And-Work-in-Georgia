@@ -29,7 +29,7 @@ export default function Footer({ services, scrollToId }: FooterProps) {
             </p>
             <div className="mt-4 space-y-2 text-sm text-white/70">
               <a
-                href="tel:+995555001017"
+                href="tel:+995555188758"
                 className="block transition hover:text-white"
               >
                 {t('footer.contactPhone', { defaultValue: '' })}

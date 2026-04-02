@@ -144,7 +144,7 @@ export default function Header({
             </div>
 
             <a
-              href="tel:+995555001017"
+              href="tel:+995555188758"
               className="ml-2 hidden items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-sm text-white/80 transition hover:border-white/30 md:flex"
             >
               <svg
@@ -158,7 +158,7 @@ export default function Header({
               >
                 <path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h2.22a1 1 0 0 1 .97.76l.86 3.45a1 1 0 0 1-.5 1.1l-1.4.7a10.1 10.1 0 0 0 5.84 5.84l.7-1.4a1 1 0 0 1 1.1-.5l3.45.86a1 1 0 0 1 .76.97v2.22a1.5 1.5 0 0 1-1.5 1.5A14.5 14.5 0 0 1 2 3.5z" />
               </svg>
-              <span className="whitespace-nowrap">+995 555 001 017</span>
+              <span className="whitespace-nowrap">+995 555 18 87 58</span>
             </a>
           </nav>
 
@@ -328,7 +328,7 @@ export default function Header({
                 {t('nav.contact')}
               </button>
               <a
-                href="tel:+995555001017"
+                href="tel:+995555188758"
                 className="flex items-center gap-3 rounded-xl px-4 py-4 text-[18px] font-medium text-white/85 transition hover:text-white"
                 style={{ background: 'rgba(201,149,90,0.06)', border: '1px solid rgba(201,149,90,0.18)' }}
               >
@@ -343,7 +343,7 @@ export default function Header({
                 >
                   <path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h2.22a1 1 0 0 1 .97.76l.86 3.45a1 1 0 0 1-.5 1.1l-1.4.7a10.1 10.1 0 0 0 5.84 5.84l.7-1.4a1 1 0 0 1 1.1-.5l3.45.86a1 1 0 0 1 .76.97v2.22a1.5 1.5 0 0 1-1.5 1.5A14.5 14.5 0 0 1 2 3.5z" />
                 </svg>
-                +995 555 001 017
+                +995 555 18 87 58
               </a>
 
               {/* Language switcher moved to header (globe) */}
